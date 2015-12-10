@@ -1,20 +1,52 @@
-var gulp  = require('gulp');
-var include = require("gulp-include");
-var config = require('../config');
-var browserSync = require('browser-sync');
-reload = browserSync.reload;
+var gulp        = require('gulp');
+var swig        = require('gulp-swig');
+var plumber     = require('gulp-plumber');
+var gulpif      = require('gulp-if');
+var changed     = require('gulp-changed');
+var prettify    = require('gulp-prettify');
+var frontMatter = require('gulp-front-matter');
+var config      = require('../config');
 
-gulp.task('html', function () {
-    gulp.src(config.src.root+'*.html')
-        .pipe(include())
-        .on('error', function(){notify("HTML include error");})
-        .pipe(gulp.dest(config.dest.root))
-        .pipe(reload({stream: true}));
+function renderHtml(onlyChanged) {
+    return gulp
+        .src([config.src.templates + '/**/[^_]*.html'])
+        .pipe(plumber({
+            errorHandler: config.errorHandler
+        }))
+        .pipe(gulpif(onlyChanged, changed(config.dest.html)))
+        .pipe(frontMatter({ property: 'data' }))
+        .pipe(swig({
+            load_json: true,
+            json_path: config.src.templatesData,
+            defaults: {
+                cache: false
+            }
+        }))
+        .pipe(prettify({
+            indent_size: 2,
+            wrap_attributes: 'auto', // 'force'
+            preserve_newlines: true,
+            // unformatted: [],
+            end_with_newline: true
+        }))
+        .pipe(gulp.dest(config.dest.html));
+}
+
+gulp.task('html', function() {
+    return renderHtml();
 });
 
-gulp.task('html:watch', function() {
+gulp.task('html:changed', function() {
+    return renderHtml(true);
+});
+
+gulp.task('html:watch',  function() {
     gulp.watch([
-    	config.src.root+'*.html', 
-    	config.src.root+'partials/*.html'
+        config.src.templates + '/**/[^_]*.html'
+    ], ['html:changed']);
+
+    gulp.watch([
+        config.src.templates + '/**/_*.html',
+        config.src.templatesData + '/*.json'
     ], ['html']);
 });

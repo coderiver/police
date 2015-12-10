@@ -1,0 +1,37 @@
++font("OpenSans-Regular", OpenSans-Regular-webfont)
++font("OpenSans-Bold", OpenSans-Bold-webfont)
++font("OpenSans-Light", OpenSans-Light-webfont)
++font("OpenSans-BoldItalic", OpenSans-BoldItalic-webfont)
++font("OpenSans-Italic", OpenSans-Italic-webfont)
++font("OpenSans-ExtraBold", OpenSans-ExtraBold-webfont)
+
+// +font("OpenSans-ExtraBoldItalic", OpenSans-ExtraBoldItalic-webfont)
+// +font("OpenSans-LightItalic", OpenSans-LightItalic-webfont)
+// +font("OpenSans-Semibold", OpenSans-Semibold-webfont)
+// +font("OpenSans-SemiboldItalic", OpenSans-SemiboldItalic-webfont)
+
+=f($name, $font-size: null, $letter-spacing: null)
+  $font-family: null
+  @if $name == "r"
+    $font-family: "OpenSans-Regular"
+  @if $name == "b"
+    $font-family: "OpenSans-Bold"
+  @if $name == "bi"
+    $font-family: "OpenSans-BoldItalic"
+  @if $name == "be"
+    $font-family: "OpenSans-ExtraBold"
+  @if $name == "l"
+    $font-family: "OpenSans-Light"
+  @if $name == "i"
+    $font-family: "OpenSans-Italic"
+
+  font-family: $font-family
+  font-weight: normal
+  @if $font-size != null
+    font-size: $font-size + px
+  @if $letter-spacing != null
+    letter-spacing: ($letter-spacing / 1000) + em
+
+body
+  +f(l, 14)
+  line-height: 1.4

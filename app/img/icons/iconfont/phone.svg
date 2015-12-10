@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="22px" viewBox="0 0 15 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.3 (16044) - http://www.bohemiancoding.com/sketch -->
+    <title>phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M10.348,22 L10.348,22 C8.99178186,21.9184232 7.72110937,21.3101798 6.807,20.305 C5.04107958,18.4125866 3.60060781,16.2408972 2.544,13.878 C0.488,9.707 -0.31,6.611 0.106,4.415 C0.55,2.071 1.982,1.477 5.053,1.42108547e-14 L8.615,7.222 L6.236,8.439 C6.20558653,9.52821711 6.48621251,10.6035453 7.045,11.539 C7.44007916,12.5734893 8.1268458,13.4711145 9.022,14.123 L11.4,12.916 L15,20.133 C12.13,21.591 11.526,22 10.348,22 L10.348,22 Z" id="phone" fill="#5F6778" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

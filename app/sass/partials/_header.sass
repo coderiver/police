@@ -1,0 +1,52 @@
+.header
+  background: $color-darkblue
+  color: #FFF
+  box-sizing: border-box
+  padding: 9px 38px 12px
+  min-height: 110px
+  +clr
+
+.header__logo
+  margin-right: 45px
+  float: left
+
+.call-patrol
+  display: inline-block
+  +f(b, 14)
+  text-transform: uppercase
+  color: $color-yellow
+  text-decoration: none
+  .icon-phone
+    font-size: 22px
+    color: #5F6778
+    position: relative
+    top: 1px
+    margin-left: 5px
+
+.call-patrol__number
+  +f(be, 27)
+
+.main-logo
+  display: block
+  position: relative
+  height: 1em
+  width: em(174,178)
+  font-size: 178/2 +px
+  background: img-url('logo@2x.png') no-repeat center
+  background-size: contain
+  text-decoration: none
+  color: inherit
+  &_beta
+    &:before
+      position: absolute
+      top: 0
+      right: 5px
+      content: "beta"
+      +f(b, 10)
+      height: 14px
+      line-height: 14px
+      box-sizing: border-box
+      padding: 0 3px
+      background: $color-yellow
+      transform: skewX(-10deg)
+      color: $color-darkblue

@@ -1,0 +1,24 @@
+---
+title: Index page
+pages:
+  - main
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+<style>
+  body {
+    padding: 40px;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+</style>
+
+<h1>Index</h1>
+<ol>
+  {% for page in pages %}
+  <li><a href="{{page}}.html">{{ page|capitalize }}</a></li>
+  {% endfor %}
+</ol>
+
+{% endblock %}
