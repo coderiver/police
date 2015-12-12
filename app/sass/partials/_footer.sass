@@ -1,0 +1,61 @@
+.footer
+  display: table
+  table-layout: fixed
+  border-spacing: 0
+  width: 100%
+  margin-top: 92px
+
+.footer__cell
+  display: table-cell
+
+.social-btn
+  position: relative
+  display: block
+  height: 100%
+  text-transform: uppercase
+  color: #FFF
+  +vertical
+  height: 94px
+  box-sizing: border-box
+  overflow: hidden
+  b, strong
+    +f(be)
+  &:after
+    content: ""
+    position: absolute
+    z-index: 0
+    top: -100%
+    left: 0
+    width: 100%
+    height: 100%
+    background: $color-yellow
+  .icon
+    display: block
+    font-size: 22px
+    height: 22px
+    margin-bottom: 8px
+  &:hover,
+  &:focus
+    &:after
+      transition: transform 0.5s ease
+      transform: translateY(200%)
+
+  &_facebook
+    background: #4662A1
+
+  &_twitter
+    background: #55ACEE
+    .icon
+      font-size: 18px
+
+  &_instagram
+    background: #2A5B83
+
+.social-btn__inner
+  position: relative
+  z-index: 1
+  display: inline-block
+  vertical-align: middle
+  font-size: 14px
+
+

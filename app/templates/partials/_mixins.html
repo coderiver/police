@@ -1,0 +1,37 @@
+{% macro event(event, mod) %}
+<a href="#" class="event{% if mod %} {{mod}}{% endif %}">
+  <span class="event__left">
+    <span class="event__time">{{event.time}}</span>
+    <span class="event__date">{{event.date}}</span>
+  </span>
+  <span class="event__text">{{event.text}}</span>
+</a>
+{% endmacro %}
+
+{% macro news(news, mod) %}
+<a href="#" class="news{% if mod %} {{mod}}{% endif %}">
+  <div class="news__pic">
+    <img src="{{news.img}}" alt="">
+  </div>
+  <div class="news__content">
+    <p class="news__text">{{news.text}}</p>
+    <i class="news__arrow icon icon-arrow-right"></i>
+  </div>
+</a>
+{% endmacro %}
+
+{% macro btn(text, mod) %}
+<button type="button" class="btn{% if mod %} {{mod}}{% endif %}">
+  {{text}}
+  {# <span class="btn__overlay"></span> #}
+  {# <span class="btn__text">{{text}}</span> #}
+</button>
+{% endmacro %}
+
+{% macro btnLink(text, mod, href) %}
+<a href="{% if href %}{{href}}{% else %}#{% endif %}" class="btn{% if mod %} {{mod}}{% endif %}">
+  {{text}}
+  {# <span class="btn__overlay"></span> #}
+  {# <span class="btn__text">{{text}}</span> #}
+</a>
+{% endmacro %}

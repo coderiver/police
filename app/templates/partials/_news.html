@@ -1,0 +1,19 @@
+<!-- BEGIN news -->
+<div class="head">
+  <h3 class="title">Новини</h3>
+  <div class="dropdown">
+    <span class="badge">Київ <i class="icon icon-chevron-down"></i></span>
+    {% include "_regions-list.html" %}
+  </div>
+</div>
+<ul class="list">
+  {% for n in news %}
+  <li class="list__item">
+    {{mixins.news(n)}}
+  </li>
+  {% endfor %}
+</ul>
+<div class="align-right">
+  {{mixins.btnLink('Усі новини')}}
+</div>
+<!-- END news -->

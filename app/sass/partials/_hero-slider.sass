@@ -1,0 +1,60 @@
+.hero-slider
+  position: relative
+
+.hero-slider__nav
+  position: absolute
+  z-index: 1
+  bottom: 34px
+  left: 0
+  font-size: 0
+
+.hero-slider__prev,
+.hero-slider__next
+  width: 58px
+  height: 58px
+  background: #19294A radial-gradient(circle 44px at center, rgba(98, 139, 225, 0.24) 0%, rgba(98, 139, 225, 0.15) 100%)
+  color: white
+  font-size: 14px
+  +trans(background-color)
+  &:hover
+    background-color: #20335B
+
+.hero-slider__prev
+  margin-right: 1px
+
+.hero-slide
+  min-height: 590px
+  color: white
+  position: relative
+  +f(l, 18)
+  line-height: 1.667
+  p
+    margin: 1em 0
+
+  &-1
+    .hero-slide__image
+      right: -35px
+
+.hero-slide__content
+  position: relative
+  z-index: 1
+  max-width: percentage(490/960)
+  padding: percentage(137/960) 0 0 10px
+
+.hero-slide__image
+  position: absolute
+  z-index: 0
+  bottom: 0
+  right: 0
+
+.hero-slide__link
+  display: block
+  margin-top: percentage(80/490)
+  +f(r, 14)
+  text-transform: uppercase
+  color: #7A859B
+  a
+    color: $color-yellow
+    +trans(color)
+    &:hover
+      color: white

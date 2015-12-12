@@ -9,7 +9,14 @@
   font-style: normal;
 }
 
-$icon-phone: "\EA01";
+$icon-arrow-left: "\EA01";
+$icon-arrow-right: "\EA02";
+$icon-chevron-down: "\EA03";
+$icon-facebook: "\EA04";
+$icon-instagram: "\EA05";
+$icon-phone: "\EA06";
+$icon-search: "\EA07";
+$icon-twitter: "\EA08";
 
 
 %icon {
@@ -42,4 +49,11 @@ $icon-phone: "\EA01";
   text-align: center;
 }
 
+.icon-arrow-left:before { content: $icon-arrow-left; }
+.icon-arrow-right:before { content: $icon-arrow-right; }
+.icon-chevron-down:before { content: $icon-chevron-down; }
+.icon-facebook:before { content: $icon-facebook; }
+.icon-instagram:before { content: $icon-instagram; }
 .icon-phone:before { content: $icon-phone; }
+.icon-search:before { content: $icon-search; }
+.icon-twitter:before { content: $icon-twitter; }

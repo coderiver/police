@@ -1,19 +1,33 @@
 {
-  "boxes": [
+  "events": [
     {
-      "title": "Box 1",
-      "url": "http://www.someurl.com",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quasi molestiae minima voluptatem nihil nobis eius dolorem distinctio cumque veniam non impedit, iure repellendus dolore quam nesciunt voluptatibus fugiat repellat."
-    },
-    {
-      "title": "Box 2",
-      "url": "http://www.someurl.com2",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quasi molestiae minima voluptatem nihil nobis eius dolorem distinctio cumque veniam non impedit, iure repellendus dolore quam nesciunt voluptatibus fugiat repellat."
-    },
-    {
-      "title": "Box 3",
-      "url": "http://www.someurl3.com",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quasi molestiae minima voluptatem nihil nobis eius dolorem distinctio cumque veniam non impedit, iure repellendus dolore quam nesciunt voluptatibus fugiat repellat."
+      "time": "12:53",
+      "date": "Сьогодні",
+      "text": "Врятували породілля від втрати крові"
+    }, {
+      "time": "09:18",
+      "date": "Сьогодні",
+      "text": "Присікли розбійний напад на Печерську"
+    }, {
+      "time": "23:39",
+      "date": "вчора",
+      "text": "Задіяли план «Перехоплення» у зв’язку із спецоперацією в Голосіївському районі"
+    }, {
+      "time": "22:21",
+      "date": "вчора",
+      "text": "Проводимо профілактичну кібер-операцію “Павутина”"
+    }, {
+      "time": "22:21",
+      "date": "вчора",
+      "text": "Проводимо профілактичну кібер-операцію “Павутина”"
+    }, {
+      "time": "12:53",
+      "date": "12.11.2015",
+      "text": "Врятували породілля від втрати крові"
+    }, {
+      "time": "09:18",
+      "date": "12.11.2015",
+      "text": "Присікли розбійний напад на Печерську"
     }
   ]
 }

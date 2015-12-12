@@ -2,13 +2,26 @@ var gulp         = require('gulp');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var postcss      = require('gulp-postcss');
+var postcsssvg   = require('postcss-svg');
 var autoprefixer = require('autoprefixer');
+var assets       = require('postcss-assets');
 var config       = require('../config');
 
 var processors = [
     autoprefixer({
         browsers: ['last 4 versions'],
         cascade: false
+    }),
+    postcsssvg({
+        paths: [
+            config.src.img,
+            config.src.img + '/svg'
+        ]
+    }),
+    assets({
+        loadPaths: [
+            config.src.img
+        ]
     })
 ];
 

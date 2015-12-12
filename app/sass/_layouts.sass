@@ -1,0 +1,40 @@
+.l
+  max-width: 960px
+  box-sizing: content-box
+  margin: auto
+  padding: 0 20px
+
+.row
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+.col
+  float: left
+  box-sizing: border-box
+  width: 100%
+  &-25
+    width: 25%
+  &-50
+    width: 50%
+  &-75
+    width: 75%
+
+.l-main-page
+  +clr
+
+.l-main-page__left
+  float: left
+  width: 100%
+  max-width: 310px
+  margin-right: -310px
+
+.l-main-page__right
+  float: right
+  margin-left: 360px
+  max-width: 550px
+
+

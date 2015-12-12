@@ -37,6 +37,8 @@
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
     "lodash": "^3.10.1",
+    "postcss-assets": "^3.0.3",
+    "postcss-svg": "^1.0.4",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
     "vinyl-buffer": "^1.0.0",
