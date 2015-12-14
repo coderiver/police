@@ -13,7 +13,7 @@
 <% }); %>
 
 %<%= className %> {
-  font-family: "<%= fontName %>";
+  font-family: "<%= fontName %>" !important;
   font-style: normal;
   font-weight: normal;
   text-rendering: auto;

@@ -14,13 +14,14 @@ $icon-arrow-right: "\EA02";
 $icon-chevron-down: "\EA03";
 $icon-facebook: "\EA04";
 $icon-instagram: "\EA05";
-$icon-phone: "\EA06";
-$icon-search: "\EA07";
-$icon-twitter: "\EA08";
+$icon-more: "\EA06";
+$icon-phone: "\EA07";
+$icon-search: "\EA08";
+$icon-twitter: "\EA09";
 
 
 %icon {
-  font-family: "iconfont";
+  font-family: "iconfont" !important;
   font-style: normal;
   font-weight: normal;
   text-rendering: auto;
@@ -54,6 +55,7 @@ $icon-twitter: "\EA08";
 .icon-chevron-down:before { content: $icon-chevron-down; }
 .icon-facebook:before { content: $icon-facebook; }
 .icon-instagram:before { content: $icon-instagram; }
+.icon-more:before { content: $icon-more; }
 .icon-phone:before { content: $icon-phone; }
 .icon-search:before { content: $icon-search; }
 .icon-twitter:before { content: $icon-twitter; }

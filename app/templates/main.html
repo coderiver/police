@@ -5,15 +5,15 @@ title: 'Головна'
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-{% include "partials/_header.html" %}
-{% include "partials/_hero-slider.html" %}
-<div class="l l-main-page">
-  <div class="l-main-page__left">
-    {% include "partials/_events.html" %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero-slider.html" %}
+  <div class="l l-main-page">
+    <div class="l-main-page__left">
+      {% include "partials/_events.html" %}
+    </div>
+    <div class="l-main-page__right">
+      {% include "partials/_news.html" %}
+    </div>
   </div>
-  <div class="l-main-page__right">
-    {% include "partials/_news.html" %}
-  </div>
-</div>
-{% include "partials/_footer.html" %}
+  {% include "partials/_footer.html" %}
 {% endblock %}

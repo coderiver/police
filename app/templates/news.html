@@ -1,0 +1,68 @@
+---
+title: Новини
+---
+
+{% extends "layouts/_layout.html" %}
+{% block content %}
+  {% include "partials/_header.html" %}
+  <div class="page-content">
+    <div class="l">
+
+      <header class="content-header">
+        <div class="content-header__left">
+          <h3 class="title title_link is-active">
+            <a href="#">Події</a>
+          </h3>
+          <h3 class="title title_link">
+            <a href="#">Новини</a>
+          </h3>
+        </div>
+        <div class="content-header__right">
+          <div class="dropdown dropdown_right">
+            <span class="badge">Усі типи <i class="icon icon-chevron-down"></i></span>
+            <ul class="dropdown__list">
+              <li>Усі типи</li>
+              <li>тип 1</li>
+              <li>тип 2</li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown_right dropdown_lg">
+            <span class="badge">Київ <i class="icon icon-chevron-down"></i></span>
+            {% include "partials/_regions-list.html"%}
+          </div>
+        </div>
+      </header>
+
+      <div class="l-news-page">
+
+        <div class="l-news-page__left">
+          <ul class="list">
+            {% for n in news %}
+              <li class="list__item">
+                {{mixins.event(n)}}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="l-news-page__right">
+          <hr class="divider">
+          <article class="article">
+            <h3 class="article__title">
+              Задіяли план «Перехоплення» у зв’язку із спецоперацією в Голосіївському районі
+            </h3>
+            <p>
+              Mauris feugiat vitae libero ac scelerisque. Maecenas rhoncus, diam scelerisque ultricies consectetur, est lectus tempus dolor, sed iaculis orci erat et tortor. Fusce quis leo eget leo ullamcorper tristique. In nec neque molestie, porttitor diam nec, suscipit augue. Duis malesuada, orci eget gravida tristique, tortor magna pretium arcu, vel bibendum velit nisi eu turpis. Nulla quis sagittis nunc. Sed convallis, mi ac pellentesque euismod, tellus lacus volutpat nibh, ut feugiat neque arcu eget arcu.
+            </p>
+          </article>
+          <div class="share">
+            <a href="#" class="share-btn icon icon-facebook"></a>
+            <a href="#" class="share-btn icon icon-twitter"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {% include "partials/_footer.html" %}
+{% endblock %}

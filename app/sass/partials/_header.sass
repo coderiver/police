@@ -1,9 +1,12 @@
 .header
+  position: relative
+  z-index: 1
   background: $color-darkblue
   color: #FFF
   box-sizing: border-box
   padding: 9px 48px 12px
   min-height: 110px
+  box-shadow: 0 0 20px 0 $color-darkblue
   +clr
 
 .header__logo
@@ -14,7 +17,7 @@
   float: right
   margin-top: 16px
 
-.call-patrol
+.header-call
   display: inline-block
   +f(b, 14)
   margin-top: 13px
@@ -22,14 +25,16 @@
   color: $color-yellow
   text-decoration: none
   line-height: 1
+  &:first-child
+    margin-right: 110px
   .icon-phone
     font-size: 22px
     color: #5F6778
     position: relative
     top: 1px
-    margin-left: 5px
+    margin-left: 17px
 
-.call-patrol__number
+.header-call__number
   +f(be, 27)
 
 .main-logo
@@ -75,6 +80,7 @@
     margin-right: 0
   &:after
     visibility: hidden
+    opacity: 0
     content: ""
     position: absolute
     top: 50%
@@ -83,13 +89,17 @@
     height: 3px
     width: 100%
     background: whitesmoke
+    transition-property: opacity, visibility
+    +trans
   &:hover
     &:after
       visibility: visible
+      opacity: 1
   &.is-active
     +f(b)
     &:after
       visibility: visible
+      opacity: 1
 
 .global-search
   position: relative

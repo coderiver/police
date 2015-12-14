@@ -1,0 +1,39 @@
+---
+title: Новини PR
+---
+
+{% extends "layouts/_layout.html" %}
+{% block content %}
+  {% include "partials/_header.html" %}
+  <div class="page-content">
+    <div class="l">
+
+      <header class="content-header">
+        <div class="content-header__left">
+          <h3 class="title title_link">
+            <a href="#">Події</a>
+          </h3>
+          <h3 class="title title_link is-active">
+            <a href="#">Новини</a>
+          </h3>
+        </div>
+        <div class="content-header__right">
+          <div class="dropdown dropdown_right">
+            <span class="badge">Усі типи <i class="icon icon-chevron-down"></i></span>
+            <ul class="dropdown__list">
+              <li>Усі типи</li>
+              <li>тип 1</li>
+              <li>тип 2</li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown_right dropdown_lg">
+            <span class="badge">Київ <i class="icon icon-chevron-down"></i></span>
+            {% include "partials/_regions-list.html"%}
+          </div>
+        </div>
+      </header>
+      
+    </div>
+  </div>
+  {% include "partials/_footer.html" %}
+{% endblock %}

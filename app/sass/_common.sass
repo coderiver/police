@@ -25,6 +25,15 @@ $flags: ua, gb, ru
   +f(be, 24)
   line-height: 1.25
   text-transform: uppercase
+  +trans(color)
+  a
+    color: inherit
+    text-decoration: none
+  &_link
+    color: #D9DEE7
+    &:hover,
+    &.is-active
+      color: $color-darkblue
   &_lg
     font-size: 42px
 
@@ -49,7 +58,7 @@ $flags: ua, gb, ru
     margin-bottom: 0
 
 .list__item
-  border: 1px solid $color-lightgrey
+  border: 1px solid $color-grey-border
   border-width: 0 0 1px 0
   &:first-child
     border-width: 1px 0
@@ -82,15 +91,18 @@ $flags: ua, gb, ru
   .dropdown
     display: inline-block
     vertical-align: middle
+    &:not(:last-child)
+      margin-right: 8px
   .title
     display: inline-block
     vertical-align: middle
-    margin-right: 13px
+    &:not(:last-child)
+      margin-right: 14px
 
 .badge
   display: inline-block
   min-width: 78px
-  padding: 0 10px
+  padding: 0 12px 0 15px
   height: 25px
   line-height: 25px
   box-sizing: border-box
@@ -110,6 +122,18 @@ $flags: ua, gb, ru
   position: relative
   .badge
     cursor: pointer
+  &_right
+    .dropdown__list
+      left: auto
+      right: 0
+      transform-origin: right top
+  &_inline
+    display: inline-block
+  &_lg
+    .dropdown__list
+      width: 360px
+      column-count: 2
+      column-gap: 15px
   &.is-active
     .dropdown__list
       visibility: visible
@@ -119,26 +143,28 @@ $flags: ua, gb, ru
 .dropdown__list
   visibility: hidden
   opacity: 0
-  transform: scale(0)
+  transform: scale(0.8)
   transform-origin: left top
   position: absolute
+  min-width: 180px
   z-index: 10
-  top: 0
+  top: 100%
   left: 0
-  width: 420px
+  margin-top: 5px
   box-sizing: border-box
-  padding: 30px 10px 10px 30px
+  padding: 30px 30px 10px 30px
   background: #2F4677
   border-radius: 8px
   font-size: 14px
+  line-height: 1.4
+  text-align: left
   text-transform: uppercase
   color: #BBC9E8
   transition: all 0.3s ease
   > li
-    display: inline-block
     +trans(color)
     cursor: pointer
-    margin: 0 20px 20px 0
+    margin: 0 0 20px 0
     &:hover
       color: white
 
@@ -197,7 +223,7 @@ $flags: ua, gb, ru
   color: $color-darkblue
   text-decoration: none
   overflow: hidden
-  &:before
+  &:after
     content: ""
     position: absolute
     top: 0
@@ -205,12 +231,109 @@ $flags: ua, gb, ru
     width: 100%
     height: 100%
     background: #2F4677
+    transform: translate3d(0, 0, 0)
   &:hover,
   &:focus
-    &:before
+    &:after
       transition: transform 0.5s ease
-      transform: translateX(200%)
+      transform: translate3d(200%, 0, 0)
 
 .btn__text
   position: relative
   z-index: 1
+
+.share
+  font-size: 0
+  margin-top: 40px
+  .share-btn
+    margin-right: 12px
+
+.share-btn
+  width: 50px
+  height: 50px
+  min-width: 0
+  box-sizing: border-box
+  line-height: 50px
+  text-align: center
+  font-size: 22px
+  background: #4662A1
+  color: white
+  text-decoration: none
+  position: relative
+  overflow: hidden
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: -100%
+    width: 100%
+    height: 100%
+    background: #2F4677
+    transform: translate3d(0, 0, 0)
+  &:before
+    position: relative
+    z-index: 1
+  &:after
+    background: $color-yellow
+  &.icon-facebook
+    background: #2F4677
+  &.icon-twitter
+    background: #55ACEE
+    font-size: 18px
+  &:hover,
+  &:focus
+    &:after
+      transition: transform 0.5s ease
+      transform: translate3d(200%, 0, 0)
+
+.link-more
+  display: inline-block
+  color: $color-yellow
+  text-decoration: none
+  +f(b, 16)
+  text-transform: uppercase
+  +trans(color)
+  .icon-more
+    font-size: 30px
+    vertical-align: middle
+    position: relative
+    top: -2px
+    margin-left: 9px
+  &:hover
+    color: white
+
+.page-content
+  padding: 35px 0 0
+
+
+.divider
+  display: block
+  width: 100%
+  height: 1px
+  background: $color-grey-border
+  margin: 20px 0
+  border: none
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+
+.content-header
+  line-height: 35px
+  margin-bottom: 20px
+  +clr
+  .dropdown
+    display: inline-block
+    margin-left: 8px
+    line-height: 1
+  .title
+    display: inline-block
+    margin-right: 24px
+
+.content-header__left
+  float: left
+
+.content-header__right
+  float: right
+  text-align: right

@@ -1,24 +1,46 @@
+{% macro slide1() %}
+  <!-- hero-slide -->
+  <div class="hero-slide hero-slide-1">
+    <div class="l">
+      <div class="hero-slide__content">
+      <h1 class="title title_lg">Ти можеш змiнити країну на краще!</h1>
+      <p>Нова полiцiя України запрошує на постійну роботу відповідальних чоловіків та жінок</p>
+      <span class="hero-slide__link">
+      Онлайн-анкета та умови конкурсу
+      <a href="www.mvs.gov.ua" target="_blank">www.mvs.gov.ua</a>
+      </span>
+      </div>
+      <img src="img/hero-slide-1.png" alt="" class="hero-slide__image">
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro slide2() %}
+  <!-- hero-slide -->
+  <div class="hero-slide hero-slide-2">
+    <div class="l">
+      <div class="hero-slide__content">
+      <h2 class="title title_lg">В Україні<br> несуть службу вже понад 4500 патрульних</h2>
+      <p>Ще 2570 майбутніх патрульних проходять навчання у семи містах у різних регіонах країни.</p>
+      <a href="#" class="link-more">Детальніше <i class="icon icon-more"></i></a>
+      </div>
+      <img src="img/map.png" alt="" class="hero-slide__image">
+    </div>
+  </div>
+{% endmacro %}
+
 <!-- BEGIN hero -->
 <div class="hero">
-  <div class="l">
-    <div class="hero-slider">
-      <div class="hero-slider__slides">
-        <!-- hero-slide -->
-        <div class="hero-slide hero-slide-1">
-          <div class="hero-slide__content">
-            <h1 class="title title_lg">Ти можеш змiнити країну на краще!</h1>
-            <p>Нова полiцiя України запрошує на постійну роботу відповідальних чоловіків та жінок</p>
-            <span class="hero-slide__link">
-              Онлайн-анкета та умови конкурсу
-              <a href="www.mvs.gov.ua" target="_blank">www.mvs.gov.ua</a>
-            </span>
-          </div>
-          <img src="img/hero-slide-1.png" alt="" class="hero-slide__image">
-        </div>
-        <!-- hero-slide -->
-        <!-- <div class="hero-slide hero-slide-2"></div> -->
-      </div>
-      <div class="hero-slider__nav">
+  <div class="hero-slider">
+    <div class="hero-slider__slides">
+      {{slide1()}}
+      {{slide2()}}
+      {{slide1()}}
+      {{slide2()}}
+      {{slide1()}}
+    </div>
+    <div class="hero-slider__nav">
+      <div class="l">
         <button type="button" class="hero-slider__prev icon icon-arrow-left"></button>
         <button type="button" class="hero-slider__next icon icon-arrow-right"></button>
       </div>
