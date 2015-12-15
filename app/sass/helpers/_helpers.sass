@@ -7,7 +7,7 @@
 =image($image)
   background-image: img-url($image)
 
-=trans($what: all, $dur: 0.15s, $easing: ease)
+=trans($what: all, $dur: 0.25s, $easing: ease)
   transition: $what $dur $easing
 
 =scroll-touch
@@ -22,14 +22,14 @@
   transform: translate3d(0,0,0)
 
 =md
-  +r(1023)
+  +r($bp1)
     @content
 
 =sm
-  +r(767)
+  +r($bp2)
     @content
 
-=xsm
+=xm
   +r(599)
     @content
 

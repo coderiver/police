@@ -8,10 +8,17 @@
   min-height: 110px
   box-shadow: 0 0 20px 0 $color-darkblue
   +clr
+  +md
+
 
 .header__logo
-  margin-right: 45px
+  // margin-right: 45px
+  margin-right: -87px
   float: left
+
+.header__content
+  float: left
+  margin-left: 132px
 
 .header__right
   float: right
@@ -32,9 +39,9 @@
     color: #5F6778
     position: relative
     top: 1px
-    margin-left: 17px
 
 .header-call__number
+  margin-left: 17px
   +f(be, 27)
 
 .main-logo
@@ -81,6 +88,8 @@
   &:after
     visibility: hidden
     opacity: 0
+    transform: scale(1, 0)
+    transform-origin: top left
     content: ""
     position: absolute
     top: 50%
@@ -91,20 +100,20 @@
     background: whitesmoke
     transition-property: opacity, visibility
     +trans
-  &:hover
+  &:hover,
+  &.is-active
     &:after
       visibility: visible
       opacity: 1
+      transform: scale(1)
   &.is-active
     +f(b)
-    &:after
-      visibility: visible
-      opacity: 1
 
 .global-search
   position: relative
   display: inline-block
   vertical-align: middle
+  display: none
 
 .global-search__input
   height: 32px

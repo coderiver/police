@@ -17,7 +17,7 @@ title: 'Головна'
           {% include "partials/_regions-list.html" %}
         </div>
       </div>
-      <ul class="list">
+      <ul class="list list_main-events">
         {% for e in events %}
         <li class="list__item">
           {{mixins.event(e)}}
@@ -38,7 +38,7 @@ title: 'Головна'
           {% include "partials/_regions-list.html" %}
         </div>
       </div>
-      <ul class="list">
+      <ul class="list list_main-news">
         {% for n in news %}
         <li class="list__item">
           {{mixins.news(n, 'news_horz')}}

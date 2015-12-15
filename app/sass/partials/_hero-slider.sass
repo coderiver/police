@@ -44,15 +44,28 @@
 
 .hero-slider__prev,
 .hero-slider__next
+  position: relative
   width: 58px
   height: 58px
-  background: #19294A radial-gradient(circle 44px at center, rgba(98, 139, 225, 0.24) 0%, rgba(98, 139, 225, 0.15) 100%)
+  background: $color-darkblue
+  // background: #19294A radial-gradient(circle 44px at center, rgba(98, 139, 225, 0.24) 0%, rgba(98, 139, 225, 0.15) 100%)
   color: white
   font-size: 14px
   +trans(background-color)
   pointer-events: all
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: radial-gradient(circle 44px at center, rgba(98, 139, 225, 0.24) 0%, rgba(98, 139, 225, 0.15) 100%)
+    +trans
   &:hover
-    background-color: #20335B
+    &:after
+      opacity: 0
+    // background-color: darken($color-darkblue, 4%)
 
 .hero-slider__prev
   margin-right: 1px
@@ -82,10 +95,26 @@
       right: percentage(-85/960)
       bottom: 98px
     .hero-slide__content
-      // padding-top: percentage(92/960)
       max-width: percentage(430/960)
     .link-more
       margin-top: 26px
+
+  +md
+    .hero-slide__content
+      padding-bottom: 80px
+
+  +sm
+    height: 450px
+    .hero-slide__image
+      display: none
+    .hero-slide__content
+      max-width: none
+    .hero-slide__link
+      margin: 0
+    .title
+      font-size: 29px
+    .link-more
+      margin: 0
 
 .hero-slide__content
   display: inline-block
@@ -94,7 +123,6 @@
   z-index: 1
   max-width: percentage(490/960)
   font-size: 18px
-  // padding: percentage(137/960) 0 0 10px
   padding: 0 0 25px 10px
 
 .hero-slide__image
