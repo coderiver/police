@@ -4,9 +4,9 @@
 +font("OpenSans-BoldItalic", OpenSans-BoldItalic-webfont)
 +font("OpenSans-Italic", OpenSans-Italic-webfont)
 +font("OpenSans-ExtraBold", OpenSans-ExtraBold-webfont)
++font("OpenSans-LightItalic", OpenSans-LightItalic-webfont)
 
 // +font("OpenSans-ExtraBoldItalic", OpenSans-ExtraBoldItalic-webfont)
-// +font("OpenSans-LightItalic", OpenSans-LightItalic-webfont)
 // +font("OpenSans-Semibold", OpenSans-Semibold-webfont)
 // +font("OpenSans-SemiboldItalic", OpenSans-SemiboldItalic-webfont)
 
@@ -22,6 +22,8 @@
     $font-family: "OpenSans-ExtraBold"
   @if $name == "l"
     $font-family: "OpenSans-Light"
+  @if $name == "li"
+    $font-family: "OpenSans-LightItalic"
   @if $name == "i"
     $font-family: "OpenSans-Italic"
 

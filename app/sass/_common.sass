@@ -2,20 +2,26 @@ body
   +font-smoothing
   color: $color-darkblue
 
+b, strong
+  +f(b)
+
+em, i
+  +f(li)
+
 .out
   overflow: hidden
 
-[class^="flag-"]
-  display: inline-block
-  width: 13px
-  height: 10px
-  background-size: cover
-  background-position: center
+// [class^="flag-"]
+//   display: inline-block
+//   width: 13px
+//   height: 10px
+//   background-size: cover
+//   background-position: center
 
-$flags: ua, gb, ru
-@each $flag in $flags
-  .flag-#{$flag}
-    background-image: svg('#{$flag}.svg')
+// $flags: ua, gb, ru
+// @each $flag in $flags
+//   .flag-#{$flag}
+//     background-image: svg('#{$flag}.svg')
 
 .hero
   margin-bottom: 85px
@@ -36,6 +42,16 @@ $flags: ua, gb, ru
       color: $color-darkblue
   &_lg
     font-size: 42px
+  &_xm
+    font-size: 14px
+
+.title-thin
+  margin-bottom: 24px
+  +f(l, 22)
+  line-height: 1.667
+  &_sm
+    font-size: 18px
+
 
 .event
   display: block
@@ -173,15 +189,21 @@ $flags: ua, gb, ru
   position: relative
   text-decoration: none
   color: inherit
-  +clr
+  &_horz
+    +clr
+    .news__pic
+      float: left
+      width: percentage(320/550)
+    .news__content
+      padding: 30px 0 0 percentage(40/550)
+      float: right
+      width: percentage(230/550)
   &:hover
     .news__arrow
       opacity: 1
       visibility: visible
 
 .news__pic
-  float: left
-  width: percentage(320/550)
   overflow: hidden
   box-sizing: border-box
   img
@@ -190,9 +212,7 @@ $flags: ua, gb, ru
 
 .news__content
   box-sizing: border-box
-  padding: 30px 0 0 percentage(40/550)
-  float: right
-  width: percentage(230/550)
+  padding: 20px 5px 10px 0
 
 .news__text
   font-size: 18px
@@ -207,6 +227,9 @@ $flags: ua, gb, ru
 
 .align-right
   text-align: right
+
+.align-center
+  text-align: center
 
 .btn
   position: relative
@@ -238,6 +261,9 @@ $flags: ua, gb, ru
       transition: transform 0.5s ease
       transform: translate3d(200%, 0, 0)
 
+  &_md
+    min-width: 180px
+
 .btn__text
   position: relative
   z-index: 1
@@ -247,6 +273,12 @@ $flags: ua, gb, ru
   margin-top: 40px
   .share-btn
     margin-right: 12px
+  &_vert
+    .share-btn
+      display: block
+      margin: 9px 0 0 0
+      &:first-child
+        margin-top: 0
 
 .share-btn
   width: 50px
@@ -337,3 +369,15 @@ $flags: ua, gb, ru
 .content-header__right
   float: right
   text-align: right
+
+.news-list
+  font-size: 0
+  margin: 0 -1px -25px 0
+
+.news-list__item
+  display: inline-block
+  vertical-align: top
+  margin-bottom: 25px
+  width: 33.3%
+  box-sizing: border-box
+  padding-right: 1px

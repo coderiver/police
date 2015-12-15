@@ -1,5 +1,5 @@
 ---
-title: Новини PR
+title: Новини
 ---
 
 {% extends "layouts/_layout.html" %}
@@ -32,7 +32,19 @@ title: Новини PR
           </div>
         </div>
       </header>
-      
+
+      <ul class="news-list">
+        {% for n in news %}
+          <li class="news-list__item">
+            {{mixins.news(n)}}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="align-center">
+        {{mixins.btnLink('Завантажити ще', 'btn_md')}}
+      </div>
+
     </div>
   </div>
   {% include "partials/_footer.html" %}

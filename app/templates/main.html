@@ -9,10 +9,46 @@ title: 'Головна'
   {% include "partials/_hero-slider.html" %}
   <div class="l l-main-page">
     <div class="l-main-page__left">
-      {% include "partials/_events.html" %}
+      <!-- BEGIN events -->
+      <div class="head">
+        <h3 class="title">Події</h3>
+        <div class="dropdown dropdown_lg">
+          <span class="badge">Київ <i class="icon icon-chevron-down"></i></span>
+          {% include "partials/_regions-list.html" %}
+        </div>
+      </div>
+      <ul class="list">
+        {% for e in events %}
+        <li class="list__item">
+          {{mixins.event(e)}}
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="align-right">
+        {{mixins.btnLink('Усі події')}}
+      </div>
+      <!-- END events -->
     </div>
     <div class="l-main-page__right">
-      {% include "partials/_news.html" %}
+      <!-- BEGIN news -->
+      <div class="head">
+        <h3 class="title">Новини</h3>
+        <div class="dropdown dropdown_lg">
+          <span class="badge">Київ <i class="icon icon-chevron-down"></i></span>
+          {% include "partials/_regions-list.html" %}
+        </div>
+      </div>
+      <ul class="list">
+        {% for n in news %}
+        <li class="list__item">
+          {{mixins.news(n, 'news_horz')}}
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="align-right">
+        {{mixins.btnLink('Усі новини')}}
+      </div>
+      <!-- END news -->
     </div>
   </div>
   {% include "partials/_footer.html" %}
