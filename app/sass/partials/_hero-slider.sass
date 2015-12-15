@@ -64,9 +64,12 @@
   position: relative
   +f(l, 18)
   line-height: 1.667
+  overflow: hidden
   .l
     position: relative
     height: 100%
+    +vertical
+    text-align: left
   p
     margin: 1em 0
 
@@ -79,16 +82,20 @@
       right: percentage(-85/960)
       bottom: 98px
     .hero-slide__content
-      padding-top: percentage(92/960)
+      // padding-top: percentage(92/960)
       max-width: percentage(430/960)
     .link-more
       margin-top: 26px
 
 .hero-slide__content
+  display: inline-block
+  vertical-align: middle
   position: relative
   z-index: 1
   max-width: percentage(490/960)
-  padding: percentage(137/960) 0 0 10px
+  font-size: 18px
+  // padding: percentage(137/960) 0 0 10px
+  padding: 0 0 25px 10px
 
 .hero-slide__image
   position: absolute

@@ -46,6 +46,7 @@
     "watchify": "^3.6.1"
   },
   "dependencies": {
-    "slick-carousel": "^1.5.9"
+    "jquery": "^2.1.4",
+    "slick-carousel": "^1.5.8"
   }
 }
