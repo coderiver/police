@@ -22,13 +22,13 @@
 
 {% macro btn(text, mod) %}
 <button type="button" class="btn{% if mod %} {{mod}}{% endif %}">
-  {{text}}
+  <span class="btn__text">{{text}}</span>
 </button>
 {% endmacro %}
 
 {% macro btnLink(text, mod, href) %}
 <a href="{% if href %}{{href}}{% else %}#{% endif %}" class="btn{% if mod %} {{mod}}{% endif %}">
-  {{text}}
+  <span class="btn__text">{{text}}</span>
 </a>
 {% endmacro %}
 

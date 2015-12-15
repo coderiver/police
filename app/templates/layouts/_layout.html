@@ -5,17 +5,21 @@
     {% include "_head.html" %}
     {# {% include "_media-tags.html" %} #}
   </head>
-  <body>
+  <body {% if bodyClass %} class="{{bodyClass}}"{% endif %}>
 
     <!-- BEGIN content -->
+    {% if noOut %}{% block content %}{% endblock %}{% else %}
     <div class="out">
       {% block content %}{% endblock %}
     </div>
+    {% endif %}
     <!-- END content -->
 
-    <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
-    <!-- END scripts -->
+    {% if !noScripts %}
+      <!-- BEGIN scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <!-- END scripts -->
+    {% endif %}
 
   </body>
 </html>

@@ -1,0 +1,18 @@
+---
+title: Сторінка не знайдена
+noScripts: true
+noOut: true
+---
+
+{% extends "layouts/_layout.html" %}
+{% block content %}
+  <div class="centered-container dark-bg">
+    <div class="centered-container__inner service-msg">
+      <div class="main-logo main-logo_beta"></div>
+      <img src="img/svg/404.svg" alt="">
+      <h1 class="title">Ця невловима сторінка<br> оголошена в розшук</h1>
+      <p>Винагорода кожному, хто сповістить,<br> де бачив її востаннє!</p>
+      {{mixins.btnLink('На головну', null, '/')}}
+    </div>
+  </div>
+{% endblock %}

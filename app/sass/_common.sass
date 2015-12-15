@@ -1,4 +1,8 @@
+html
+  height: 100%
+
 body
+  height: 100%
   +font-smoothing
   color: $color-darkblue
 
@@ -10,6 +14,9 @@ em, i
 
 .out
   overflow: hidden
+
+.dark-bg
+  background: #1E3054
 
 // [class^="flag-"]
 //   display: inline-block
@@ -381,3 +388,78 @@ em, i
   width: 33.3%
   box-sizing: border-box
   padding-right: 1px
+
+
+.centered-container
+  height: 100%
+  padding: 20px
+  box-sizing: border-box
+  text-align: center
+  +vertical
+  color: white
+  color: #1E3054
+  overflow: auto
+  +scroll-touch
+
+.centered-container__inner
+  display: inline-block
+  vertical-align: middle
+  font-size: 17px
+
+.service-msg
+  text-align: center
+  color: white
+  margin-bottom: percentage(100/960)
+  line-height: 1.35
+  font-size: 17px
+  .main-logo
+    margin: 0 auto 85px
+  .title
+    font-size: 28px
+    margin-bottom: 15px
+  .btn
+    margin-top: 25px
+  > img
+    display: block
+    margin: 42px auto
+  +r(500)
+    .main-logo
+      margin-bottom: 50px
+    .title
+      font-size: 26px
+      br
+        display: none
+
+.browser-list
+  margin-top: 55px
+  font-size: 0
+
+.browser-list__item
+  display: inline-block
+  vertical-align: top
+  font-size: 15px
+  margin-right: 55px
+  &:last-child
+    margin-right: 0
+  +r(500)
+    &:not(:last-child)
+      margin-right: 20px
+
+.browser-link
+  display: inline-block
+  font-size: 15px
+  color: $color-yellow
+  text-decoration: none
+  +trans(color)
+  .icon
+    display: block
+    font-size: 48px
+    position: relative
+    margin-bottom: 10px
+  .icon-safari
+    font-size: 53px
+    margin-top: -5px
+  > span
+    text-decoration: underline
+  &:hover
+    color: white
