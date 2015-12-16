@@ -1,7 +1,11 @@
 'use strict';
 
+var perfectScrollbar;
+var mqMob = window.matchMedia('(max-width: 767px)');
+
 window.$ = window.jQuery = require('jquery');
 require('slick-carousel');
+perfectScrollbar = require('perfect-scrollbar');
 
 $(document).ready(function() {
     document.querySelector('.lang').addEventListener('click', function() {
@@ -31,4 +35,24 @@ $(document).ready(function() {
         e.preventDefault();
         $('.header__menu').toggleClass('is-active');
     });
+
+    if (!mqMob.matches) {
+        perfectScrollbar.initialize($('[data-scroller]')[0], {
+            wheelPropagation: true
+        });
+    }
+});
+
+mqMob.addListener(function(e) {
+    var matches = e.matches !== undefined
+        ? e.matches
+        : e.currentTarget.matches;
+
+    if (!matches) {
+        perfectScrollbar.initialize($('[data-scroller]')[0], {
+            wheelPropagation: true
+        });
+    } else {
+        perfectScrollbar.destroy($('[data-scroller]')[0]);
+    }
 });
