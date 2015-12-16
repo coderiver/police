@@ -3,14 +3,24 @@
   table-layout: fixed
   border-spacing: 0
   width: 100%
-  margin-top: 70px
+  &_static
+    margin-top: 70px
+    .footer__cell
+      transform: none
+  &:hover
+    .footer__cell
+      transform: none
   +r($bp2)
     display: block
+    margin-top: 60px
     .footer__cell
       display: block
+      transform: none
 
 .footer__cell
   display: table-cell
+  transform: translateY(90%)
+  transition: transform 0.3s ease
 
 .social-btn
   position: relative

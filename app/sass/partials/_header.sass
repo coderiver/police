@@ -1,6 +1,6 @@
 .header
   position: relative
-  z-index: 1
+  z-index: 10
   background: $color-darkblue
   color: #FFF
   box-sizing: border-box
@@ -8,21 +8,77 @@
   min-height: 110px
   box-shadow: 0 0 20px 0 $color-darkblue
   +clr
-  +md
+  +r(1000)
+    padding-left: 20px
+    padding-right: 20px
+    .header__content
+      margin-left: 112px
+    .header__right
+      right: 20px
+    .header-call
+      font-size: 12px
+      margin-top: 4px
+    .header-call__text
+      display: block
+  +sm
+    min-height: 0
+    height: 80px
+    padding-right: 60px
+    .header__content
+      margin-left: 75px
+    .header-call
+      font-size: 9px
+      margin: 0
+      &:not(:first-child)
+        margin-top: 5px
+    .header__logo
+      margin-top: 3px
+    .header__right
+      position: relative
+      top: 0
+      right: 0
 
 
 .header__logo
-  // margin-right: 45px
+  position: relative
+  z-index: 1
   margin-right: -87px
   float: left
 
 .header__content
-  float: left
   margin-left: 132px
 
 .header__right
-  float: right
+  right: 48px
+  position: absolute
+  top: 9px
   margin-top: 16px
+
+.header__menu
+  +sm
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    z-index: 99
+    top: 80px
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 20px
+    background: $color-darkblue
+    transition: all 0.5s ease
+    transition-property: opacity, visibility
+    +scroll-touch
+    overflow: auto
+    &.is-active
+      opacity: 1
+      visibility: visible
+
+.header__menu-btn
+  position: absolute
+  top: 50%
+  right: 20px
+  margin-top: -12px
 
 .header-call
   display: inline-block
@@ -32,17 +88,25 @@
   color: $color-yellow
   text-decoration: none
   line-height: 1
-  &:first-child
-    margin-right: 110px
+  &:not(:last-child)
+    margin-right: 30px
   .icon-phone
-    font-size: 22px
+    font-size: em(22,27)
     color: #5F6778
     position: relative
     top: 1px
+  +rmin(1200)
+    &:not(:last-child)
+      margin-right: 110px
 
 .header-call__number
-  margin-left: 17px
-  +f(be, 27)
+  display: inline-block
+  +f(be)
+  font-size: em(27,14)
+
+.header-call__text
+  display: inline-block
+  margin-right: em(17,27)
 
 .main-logo
   display: block
@@ -68,11 +132,42 @@
       background: $color-yellow
       transform: skewX(-10deg)
       color: $color-darkblue
+  &_adaptive
+    +sm
+      background-image: img-url('logo-small@2x.png')
+      width: 1em
+      font-size: 114/2 +px
+      &_beta
+        &:before
+          right: auto
+          left: 50%
+          margin-left: 10px
 
+
+.hamburger
+  position: relative
+  background: none
+  &:before,
+  &:after
+    content: ""
+  &:before,
+  &:after,
+  span
+    display: block
+    width: 32px
+    height: 4px
+    background: white
+  span
+    margin: 6px 0
 
 .main-menu
   font-size: 0
   margin-top: 14px
+  +sm
+    .main-menu__link
+      display: block
+      margin: 0 0 10px
+
 
 .main-menu__link
   display: inline-block

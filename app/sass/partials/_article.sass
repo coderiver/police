@@ -11,7 +11,7 @@
     max-width: 100%
   > img
     display: block
-    margin: 40px 0
+    margin: percentage(40/720) 0
     &:first-child
       margin-top: 0
     &:last-child
@@ -20,6 +20,12 @@
     > li
       &:before
         content: "- "
+
+  +sm
+    > img
+      margin-left: -10px
+      margin-right: -10px
+      max-width: calc(100% + 20px)
 
 .article__title
   margin-bottom: 24px
@@ -39,10 +45,18 @@
     top: 0
     right: 0
     margin-top: 0
+  +sm
+    padding-right: 0
+    margin-bottom: 50px
+    .share
+      position: relative
+      margin-top: 25px
+    .share-btn
+      display: inline-block
+      margin: 0 12px 0 0
 
 .article-aside
   border-top: 4px solid $color-yellow
   padding-top: 10px
   .title
     margin-bottom: 7px
-

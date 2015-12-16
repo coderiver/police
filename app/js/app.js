@@ -26,4 +26,9 @@ $(document).ready(function() {
         useCSS: true,
         dots: true
     });
+
+    $('.hamburger').on('click', function(e) {
+        e.preventDefault();
+        $('.header__menu').toggleClass('is-active');
+    });
 });

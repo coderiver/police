@@ -19,6 +19,22 @@ em, i
 .dark-bg
   background: #1E3054
 
+.visible-md
+  +rmin($bp1)
+    display: none !important
+
+.visible-sm
+  +rmin($bp2)
+    display: none !important
+
+.hidden-md
+  +md
+    display: none !important
+
+.hidden-sm
+  +sm
+    display: none !important
+
 // [class^="flag-"]
 //   display: inline-block
 //   width: 13px
@@ -69,6 +85,12 @@ em, i
     margin-top: 0
   &:last-child
     margin-bottom: 0
+  +sm
+    .list__item
+      margin-left: -10px
+      margin-right: -10px
+      padding-left: 10px
+      padding-right: 10px
   &_main-events
     +rmin($bp1)
       .list__item:nth-child(6) ~ .list__item
@@ -80,9 +102,6 @@ em, i
     +sm
       .list__item
         border: none
-      .news__pic
-        margin-left: -20px
-        margin-right: -20px
 
 .list__item
   border: 1px solid $color-grey-border
@@ -229,6 +248,10 @@ em, i
       opacity: 1
       visibility: visible
       transform: none
+  +sm
+    .news__pic
+      margin-left: -10px
+      margin-right: -10px
 
 .news__pic
   overflow: hidden
@@ -312,6 +335,8 @@ em, i
         margin-top: 0
 
 .share-btn
+  display: inline-block
+  vertical-align: top
   width: 50px
   height: 50px
   min-width: 0
@@ -367,6 +392,8 @@ em, i
 
 .page-content
   padding: 35px 0 0
+  +sm
+    padding-top: 25px
 
 
 .divider
@@ -388,11 +415,17 @@ em, i
   +clr
   .dropdown
     display: inline-block
-    margin-left: 8px
     line-height: 1
+    &:not(:first-child)
+      margin-left: 8px
   .title
     display: inline-block
     margin-right: 24px
+  +sm
+    .content-header__left,
+    .content-header__right
+      float: none
+      text-align: left
 
 .content-header__left
   float: left
@@ -404,6 +437,20 @@ em, i
 .news-list
   font-size: 0
   margin: 0 -1px -25px 0
+  text-align: center
+  .news__pic
+    margin-left: 0
+    margin-right: 0
+  +md
+    .news-list__item
+      width: 50%
+  +xs
+    .news-list__item
+      display: block
+      width: auto
+    .news__pic
+      margin-left: -10px
+      margin-right: -10px
 
 .news-list__item
   display: inline-block
@@ -412,6 +459,7 @@ em, i
   width: 33.3%
   box-sizing: border-box
   padding-right: 1px
+  text-align: left
 
 
 .centered-container
@@ -487,4 +535,3 @@ em, i
     text-decoration: underline
   &:hover
     color: white
-
