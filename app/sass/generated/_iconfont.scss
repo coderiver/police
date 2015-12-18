@@ -18,10 +18,11 @@ $icon-firefox: "\EA06";
 $icon-instagram: "\EA07";
 $icon-more: "\EA08";
 $icon-opera: "\EA09";
-$icon-phone: "\EA0A";
-$icon-safari: "\EA0B";
-$icon-search: "\EA0C";
-$icon-twitter: "\EA0D";
+$icon-pdf: "\EA0A";
+$icon-phone: "\EA0B";
+$icon-safari: "\EA0C";
+$icon-search: "\EA0D";
+$icon-twitter: "\EA0E";
 
 
 %icon {
@@ -63,6 +64,7 @@ $icon-twitter: "\EA0D";
 .icon-instagram:before { content: $icon-instagram; }
 .icon-more:before { content: $icon-more; }
 .icon-opera:before { content: $icon-opera; }
+.icon-pdf:before { content: $icon-pdf; }
 .icon-phone:before { content: $icon-phone; }
 .icon-safari:before { content: $icon-safari; }
 .icon-search:before { content: $icon-search; }

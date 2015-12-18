@@ -5,7 +5,7 @@
     {% include "_head.html" %}
     {# {% include "_media-tags.html" %} #}
   </head>
-  <body {% if bodyClass %} class="{{bodyClass}}"{% endif %}>
+  <body {% if bodyClass %} class="{{bodyClass}}"{% endif %} class="is-beta">
 
     <!-- BEGIN content -->
     {% if noOut %}{% block content %}{% endblock %}{% else %}

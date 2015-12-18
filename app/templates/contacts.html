@@ -1,0 +1,57 @@
+---
+title: Новини
+---
+
+{% extends "layouts/_layout.html" %}
+{% block content %}
+  {% include "partials/_header.html" %}
+  <div class="page-content">
+    <div class="l">
+
+      <header class="content-header">
+        <div class="content-header__left">
+          <h3 class="title title_link">
+            <a href="#">Контакти</a>
+          </h3>
+          <h3 class="title title_link is-active">
+            <a href="#">Вакансії</a>
+          </h3>
+          <h3 class="title title_link">
+            <a href="#">Запити</a>
+          </h3>
+        </div>
+        
+      </header>
+
+      <!-- begin contacts  -->
+      <div class="contacts">
+        <!-- begin vacancy  -->
+        <div class="vacancy">
+          <div class="vacancy__title">Шукаемо нового шефа полиции Волинскои Области</div>
+          <a href='#' class="vacancy__download"><i class="icon icon-pdf"></i><span>Завантажити детали вакансії</span></a>
+        </div>
+        <!-- end vacancy -->
+        <!-- begin vacancy  -->
+        <div class="vacancy">
+          <div class="vacancy__title">Шукаемо нового шефа полиции Волинскои Области</div>
+          <a href='#' class="vacancy__download"><i class="icon icon-pdf"></i><span>Завантажити детали вакансії</span></a>
+        </div>
+        <!-- end vacancy -->
+        <!-- begin vacancy  -->
+        <div class="vacancy">
+          <div class="vacancy__title">Шукаемо нового шефа полиции Волинскои Области</div>
+          <a href='#' class="vacancy__download"><i class="icon icon-pdf"></i><span>Завантажити детали вакансії</span></a>
+        </div>
+        <!-- end vacancy -->
+        
+      </div>
+      <!-- end contacts -->
+
+      <!-- <div class="align-center">
+        {{mixins.btnLink('Завантажити ще', 'btn_md')}}
+      </div> -->
+
+    </div>
+  </div>
+  {% include "partials/_footer.html" %}
+{% endblock %}
