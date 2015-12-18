@@ -1,0 +1,48 @@
+---
+title: Новини
+---
+
+{% extends "layouts/_layout.html" %}
+{% block content %}
+  {% include "partials/_header.html" %}
+  <div class="page-content">
+    <div class="l">
+
+      <header class="content-header">
+        <div class="content-header__left">
+          <h3 class="title title_link is-active">
+            <a href="map.html">Контакти</a>
+          </h3>
+          <h3 class="title title_link">
+            <a href="contacts.html">Вакансії</a>
+          </h3>
+          <h3 class="title title_link ">
+            <a href="zapit.html">Запити</a>
+          </h3>
+        </div>
+        
+      </header>
+
+      <!-- begin contacts  -->
+      <div class="contacts">
+        <!-- begin contacts__left  -->
+        <div class="contacts__left">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, voluptatibus, necessitatibus? Quibusdam dolorum, ratione impedit. Libero dolorum ab suscipit numquam unde corporis aliquid, neque cumque laboriosam consectetur, saepe pariatur sunt?
+        </div>
+        <!-- end contacts__left -->
+        <!-- begin contacts__right -->
+        <div class="contacts__right">
+         <img src="img/mapu.png" alt="">
+        </div>
+        <!-- end contacts__right -->
+      </div>
+      <!-- end contacts -->
+
+      <!-- <div class="align-center">
+        {{mixins.btnLink('Завантажити ще', 'btn_md')}}
+      </div> -->
+
+    </div>
+  </div>
+  {% include "partials/_footer.html" %}
+{% endblock %}
