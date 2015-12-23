@@ -16,11 +16,11 @@ $icon-chrome: "\EA04";
 $icon-facebook: "\EA05";
 $icon-firefox: "\EA06";
 $icon-instagram: "\EA07";
-$icon-loc: "\EA08";
-$icon-location: "\EA09";
-$icon-more: "\EA0A";
-$icon-opera: "\EA0B";
-$icon-pdf: "\EA0C";
+$icon-location: "\EA08";
+$icon-more: "\EA09";
+$icon-opera: "\EA0A";
+$icon-pdf: "\EA0B";
+$icon-phone-2: "\EA0C";
 $icon-phone: "\EA0D";
 $icon-phone2: "\EA0E";
 $icon-safari: "\EA0F";
@@ -66,11 +66,11 @@ $icon-twitter: "\EA12";
 .icon-facebook:before { content: $icon-facebook; }
 .icon-firefox:before { content: $icon-firefox; }
 .icon-instagram:before { content: $icon-instagram; }
-.icon-loc:before { content: $icon-loc; }
 .icon-location:before { content: $icon-location; }
 .icon-more:before { content: $icon-more; }
 .icon-opera:before { content: $icon-opera; }
 .icon-pdf:before { content: $icon-pdf; }
+.icon-phone-2:before { content: $icon-phone-2; }
 .icon-phone:before { content: $icon-phone; }
 .icon-phone2:before { content: $icon-phone2; }
 .icon-safari:before { content: $icon-safari; }

@@ -1,0 +1,21 @@
+#map-canvas
+  path
+    fill: white
+    stroke-width: 2
+    stroke: blue
+    transition: fill 0.3s ease
+    cursor: pointer
+    &.hover
+      fill: yellow
+    &.inactive
+      fill: #CCC
+
+#cities
+  pointer-events: none
+  circle
+    fill: brown
+    transition: all 0.3s ease
+    &.hover
+      fill: blue
+    &.inactive
+      display: none

@@ -49,5 +49,8 @@ gulp.task('sass', function() {
 });
 
 gulp.task('sass:watch', function() {
-    gulp.watch(config.src.sass + '/**/*.{sass,scss}', ['sass']);
+    gulp.watch([
+        config.src.sass + '/**/*.{sass,scss}',
+        config.src.root + '/map/*.{sass,scss}'
+    ], ['sass']);
 });

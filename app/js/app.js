@@ -6,7 +6,7 @@ var mqMob = window.matchMedia('(max-width: 767px)');
 window.$ = window.jQuery = require('jquery');
 require('slick-carousel');
 perfectScrollbar = require('perfect-scrollbar');
-require('./modules/map-ukraine');
+require('../map/map-ukraine');
 
 $(document).ready(function() {
     var scrollArea = $('[data-scroller]');
@@ -60,4 +60,12 @@ $(document).ready(function() {
             }
         });
     }
+
+    $('#mapUkraine').on('mapRegionEnter', function(event, regionID, dotCoord) {
+        console.log('enter %s, x: %d, y: %d', regionID, dotCoord.x, dotCoord.y);
+    });
+
+    $('#mapUkraine').on('mapRegionLeave', function(event, regionID, dotCoord) {
+        // console.log('leave %s', regionID);
+    });
 });
