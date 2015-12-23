@@ -16,13 +16,17 @@ $icon-chrome: "\EA04";
 $icon-facebook: "\EA05";
 $icon-firefox: "\EA06";
 $icon-instagram: "\EA07";
-$icon-more: "\EA08";
-$icon-opera: "\EA09";
-$icon-pdf: "\EA0A";
-$icon-phone: "\EA0B";
-$icon-safari: "\EA0C";
-$icon-search: "\EA0D";
-$icon-twitter: "\EA0E";
+$icon-loc: "\EA08";
+$icon-location: "\EA09";
+$icon-more: "\EA0A";
+$icon-opera: "\EA0B";
+$icon-pdf: "\EA0C";
+$icon-phone: "\EA0D";
+$icon-phone2: "\EA0E";
+$icon-safari: "\EA0F";
+$icon-search: "\EA10";
+$icon-select: "\EA11";
+$icon-twitter: "\EA12";
 
 
 %icon {
@@ -62,10 +66,14 @@ $icon-twitter: "\EA0E";
 .icon-facebook:before { content: $icon-facebook; }
 .icon-firefox:before { content: $icon-firefox; }
 .icon-instagram:before { content: $icon-instagram; }
+.icon-loc:before { content: $icon-loc; }
+.icon-location:before { content: $icon-location; }
 .icon-more:before { content: $icon-more; }
 .icon-opera:before { content: $icon-opera; }
 .icon-pdf:before { content: $icon-pdf; }
 .icon-phone:before { content: $icon-phone; }
+.icon-phone2:before { content: $icon-phone2; }
 .icon-safari:before { content: $icon-safari; }
 .icon-search:before { content: $icon-search; }
+.icon-select:before { content: $icon-select; }
 .icon-twitter:before { content: $icon-twitter; }

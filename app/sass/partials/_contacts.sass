@@ -1,28 +1,86 @@
 .contacts
-	padding-bottom: 30px 
-	padding-top: 30px 
+	padding-bottom: 30px
+	padding-top: 30px
 	+clr
 	&__left
-		float: left
-		width: 280px 
+		float: right
+		width: 280px
 	&__right
 		overflow: hidden
-		padding-left: 30px 
+		padding-right: 30px
 		img
-			width: 100% 
+			width: 100%
+.vacancy-wrapper
+	padding-top: 40px
 .vacancy
-	margin-bottom: 40px 
+	margin-bottom: 40px
 	.vacancy__title
-		font-size: 18px 
-		+f(r,20)
-		margin-bottom: 10px 
+		+f(r,16)
+		margin-bottom: 10px
 	.vacancy__download
 		text-decoration: none
-		color: #777 
+		color: #777
 		i
-			font-size: 28px 
-			margin-right: 10px 
+			font-size: 28px
+			margin-right: 10px
 			display: inline-block
 			vertical-align: middle
 			color: #ffde00
-	
+
+.select
+	border: 1px solid #435679
+	position: relative
+	select
+		opacity: 0
+		appearance: none
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
+		width: 100%
+	.select__value
+		height: 54px
+		line-height: 54px
+		padding-left: 20px
+		font-size: 14px
+		color: #1a2a49
+	.select__arrow
+		color: #000
+		font-size: 20px
+		position: absolute
+		right: 10px
+		top: 50%
+		background: #f00
+.contact
+	margin-top: 50px
+	font-size: 16px
+	line-height: 24px
+	color: #1a2a49
+	p
+		margin-bottom: 14px
+	&__schedule
+		font-size: 14px
+		span
+			color: #a1a1a1
+			text-transform: uppercase
+	ul
+		font-size: 14px
+	li
+		margin-bottom: 13px
+		padding-left: 40px
+		position: relative
+		i
+			position: absolute
+			left: 0
+			top: 2px
+			color: #fedc32
+			font-size: 27px
+			&.icon-facebook
+				color: #fff
+				font-size: 13px
+				width: 21px
+				border-radius: 50%
+				line-height: 21px
+				height: 21px
+				background: #fedc32
+				text-align: center
