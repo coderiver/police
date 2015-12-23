@@ -20,6 +20,17 @@
 </a>
 {% endmacro %}
 
+{% macro faq(faq) %}
+<a href="#" class="q">
+  <div class="q__num">
+    {{faq.num}}
+  </div>
+  <div class="q__content">
+    {{faq.text}}
+  </div>
+</a>
+{% endmacro %}
+
 {% macro btn(text, mod) %}
 <button type="button" class="btn{% if mod %} {{mod}}{% endif %}">
   <span class="btn__text">{{text}}</span>
@@ -30,6 +41,15 @@
 <a href="{% if href %}{{href}}{% else %}#{% endif %}" class="btn{% if mod %} {{mod}}{% endif %}">
   <span class="btn__text">{{text}}</span>
 </a>
+{% endmacro %}
+
+{% macro vac %}
+<!-- begin vacancy  -->
+<div class="vacancy">
+  <div class="vacancy__title"><a href='#'>Шукаемо нового шефа полиции Волинскои Области</a></div>
+  <a href='#' class="vacancy__download"><i class="icon icon-pdf"></i><span>Завантажити детали вакансії</span></a>
+</div>
+<!-- end vacancy -->
 {% endmacro %}
 
 {% macro share(mod) %}
