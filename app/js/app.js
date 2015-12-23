@@ -6,8 +6,11 @@ var mqMob = window.matchMedia('(max-width: 767px)');
 window.$ = window.jQuery = require('jquery');
 require('slick-carousel');
 perfectScrollbar = require('perfect-scrollbar');
+require('./modules/map-ukraine');
 
 $(document).ready(function() {
+    var scrollArea = $('[data-scroller]');
+
     document.querySelector('.lang').addEventListener('click', function() {
         this.classList.toggle('is-active');
     });
@@ -36,23 +39,25 @@ $(document).ready(function() {
         $('.header__menu').toggleClass('is-active');
     });
 
-    if (!mqMob.matches) {
-        perfectScrollbar.initialize($('[data-scroller]')[0], {
-            wheelPropagation: true
-        });
-    }
-});
+    if (scrollArea.length) {
+        if (!mqMob.matches) {
+            perfectScrollbar.initialize(scrollArea[0], {
+                wheelPropagation: true
+            });
+        }
 
-mqMob.addListener(function(e) {
-    var matches = e.matches !== undefined
-        ? e.matches
-        : e.currentTarget.matches;
+        mqMob.addListener(function(e) {
+            var matches = e.matches !== undefined
+                ? e.matches
+                : e.currentTarget.matches;
 
-    if (!matches) {
-        perfectScrollbar.initialize($('[data-scroller]')[0], {
-            wheelPropagation: true
+            if (!matches) {
+                perfectScrollbar.initialize($('[data-scroller]')[0], {
+                    wheelPropagation: true
+                });
+            } else {
+                perfectScrollbar.destroy($('[data-scroller]')[0]);
+            }
         });
-    } else {
-        perfectScrollbar.destroy($('[data-scroller]')[0]);
     }
 });
