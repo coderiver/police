@@ -1,5 +1,5 @@
 {% macro event(event, mod) %}
-<a href="#" class="event{% if mod %} {{mod}}{% endif %}">
+<a href="news.html" class="event{% if mod %} {{mod}}{% endif %}">
   <span class="event__left">
     <span class="event__time">{{event.time}}</span>
     <span class="event__date">{{event.date}}</span>
@@ -9,7 +9,7 @@
 {% endmacro %}
 
 {% macro news(news, mod) %}
-<a href="#" class="news{% if mod %} {{mod}}{% endif %}">
+<a href="news-piece.html" class="news{% if mod %} {{mod}}{% endif %}">
   <div class="news__pic">
     <img src="{{news.img}}" alt="">
   </div>
