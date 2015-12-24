@@ -1,21 +1,30 @@
+$map-main-color: #CCD4E2
+
 #map-canvas
   path
     fill: white
     stroke-width: 2
-    stroke: blue
+    stroke: $map-main-color
     transition: fill 0.3s ease
     cursor: pointer
-    &.hover
-      fill: yellow
+    &:hover
+      fill: rgba($map-main-color, 0.2)
+    // &.active
+    //   fill: #FFDE00
     &.inactive
-      fill: #CCC
+      fill: rgba($map-main-color, 0.5)
 
 #cities
   pointer-events: none
   circle
-    fill: brown
-    transition: all 0.3s ease
-    &.hover
-      fill: blue
+    fill: $map-main-color
+    &.active
+      fill: #19294A
     &.inactive
       display: none
+
+#map-marker
+  visibility: hidden
+  fill: #FFDE00
+  &.active
+    visibility: visible

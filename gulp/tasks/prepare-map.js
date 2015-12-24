@@ -1,15 +1,12 @@
 var gulp        = require('gulp');
 var iconfont    = require('gulp-iconfont');
 var svgmin      = require('gulp-svgmin');
-// var consolidate = require('gulp-consolidate');
-// var _           = require('lodash');
 var fs          = require('fs');
 var config      = require('../config');
-// var rename      = require('gulp-rename');
 var cheerio     = require('gulp-cheerio');
 var pathToMap   = config.src.root + '/map/map-ukraine.svg';
 
-gulp.task('prepare-map', function() {
+gulp.task('map', function() {
     fs.readFile(config.src.root + '/map/regions.json', 'utf-8', function(err, data) {
         if (err) {
             config.errorHandler(err);
@@ -19,6 +16,13 @@ gulp.task('prepare-map', function() {
             JSON.parse(data)
         );
     });
+});
+
+gulp.task('map:watch', function() {
+    gulp.watch([
+        config.src.root + '/map/map-ukraine.svg',
+        config.src.root + '/map/regions.json'
+    ], ['map']);
 });
 
 function makeMap(regions) {

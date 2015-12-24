@@ -1,14 +1,28 @@
 var mapContainer = $('#mapUkraine');
-var REGION_ENTER = 'mapRegionEnter';
-var REGION_LEAVE = 'mapRegionLeave';
 
 var MapUkraine = (function() {
+    var REGION_ENTER   = 'mapRegionEnter';
+    var REGION_LEAVE   = 'mapRegionLeave';
+    var REGION_CHANGE  = 'mapRegionChange';
+    var MARKER_SIZE    = [36, 48];
+    var POS_CORRECTION = [2, 15];
+
+    function parseSVGTransform(str) {
+        var match = str.match(/\d+\s\d+/);
+        var res   = [0, 0];
+        if (match) {
+            res = match[0].split(' ').map(function(val) {
+                return +val;
+            });
+        }
+        return res;
+    }
+
     function MapUkraine(container, url) {
         this.container = container;
         this.url       = url;
         this.svg       = null;
         this.marker    = null;
-        // this.regions   = require('./regions.json');
 
         this.render();
     }
@@ -29,30 +43,50 @@ var MapUkraine = (function() {
         var region;
         var city;
         var cityPos;
+        var markerPos;
+
+        var shift = parseSVGTransform(
+            self.svg.find('#cities').attr('transform')
+        );
+
         self.svg.find('#map-canvas > path')
-            .mouseenter(function(event) {
-                region = $(this);
-                if (region.attr('class') === 'inactive') {
-                    region = city = cityPos = null;
+            .click(function(event) {
+                var current      = $(this);
+                var currentClass = current.attr('class');
+
+                if (currentClass === 'inactive' || currentClass === 'active') {
                     return;
                 }
+
+                if (region) {
+                    region.add(city).attr('class', '');
+                }
+
+                region = current;
+
                 city = self.svg.find('#cities #' + this.id);
-                region.add(city).attr('class', 'hover');
-                cityPos = {
-                    x: +city.attr('cx') - 7,
-                    y: +city.attr('cy') - 312
-                };
-                self.marker.attr('transform', 'translate(' + cityPos.x + ' ' + cityPos.y + ')');
-                self.svg.trigger(REGION_ENTER, [
+
+                region.add(city).attr('class', 'active');
+                self.marker.attr('class', 'active');
+
+                cityPos = [
+                    +city.attr('cx') + shift[0],
+                    +city.attr('cy') + shift[1]
+                ];
+
+                markerPos = [
+                    cityPos[0] - MARKER_SIZE[0] / 2 - POS_CORRECTION[0],
+                    cityPos[1] - MARKER_SIZE[1] - POS_CORRECTION[1]
+                ];
+
+                self.marker.attr(
+                    'transform',
+                    'translate(' + markerPos[0] +  ' ' + markerPos[1] + ')'
+                );
+
+                self.svg.trigger(REGION_CHANGE, [
                     region.attr('id'),
                     cityPos
-                ]);
-            })
-            .mouseleave(function(event) {
-                if (!region) return;
-                region.add(city).attr('class', '');
-                self.svg.trigger(REGION_LEAVE, [
-                    region.attr('id')
                 ]);
             });
     };

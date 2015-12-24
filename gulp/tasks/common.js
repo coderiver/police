@@ -14,7 +14,8 @@ gulp.task('build', ['clean'],  function(cb) {
         'sass',
         'html',
         'scripts',
-        'copy'
+        'copy',
+        'map'
     );
     cb();
 });
@@ -24,5 +25,6 @@ gulp.task('watch', [
     'iconfont:watch',
     'imagemin:watch',
     'scripts:watch',
-    'html:watch'
+    'html:watch',
+    'map:watch'
 ]);

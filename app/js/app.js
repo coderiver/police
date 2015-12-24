@@ -61,11 +61,7 @@ $(document).ready(function() {
         });
     }
 
-    $('#mapUkraine').on('mapRegionEnter', function(event, regionID, dotCoord) {
-        console.log('enter %s, x: %d, y: %d', regionID, dotCoord.x, dotCoord.y);
-    });
-
-    $('#mapUkraine').on('mapRegionLeave', function(event, regionID, dotCoord) {
-        // console.log('leave %s', regionID);
+    $('#mapUkraine').on('mapRegionChange', function(event, regionID, dotCoord) {
+        console.log('regionID: %s, cityX: %d, cityY: %d', regionID, dotCoord[0], dotCoord[1]);
     });
 });
