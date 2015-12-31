@@ -233,7 +233,9 @@ em, i { font-family: "OpenSans-LightItalic"; font-weight: normal; }
 
 .event { display: block; text-decoration: none; color: inherit; cursor: pointer; position: relative; min-height: 99px; box-sizing: border-box; padding: 14px 0 10px 112px; transition: box-shadow 0.25s ease; }
 
-.event:hover { box-shadow: -5px 0 0 0 #FFDE00; }
+.event:hover, .event.is-active { box-shadow: -5px 0 0 0 #FFDE00; }
+
+.ps-container .event:hover::after, .ps-container .event.is-active::after { box-shadow: none; position: absolute; left: 0; top: 0; bottom: 0; content: ''; width: 5px; background: #FFDE00; }
 
 .event__left { position: absolute; top: 14px; left: 0; width: 100px; text-align: center; }
 
@@ -356,6 +358,10 @@ em, i { font-family: "OpenSans-LightItalic"; font-weight: normal; }
 .content-header__right { float: right; text-align: right; }
 
 .news-list { font-size: 0; margin: 0 -1px -25px 0; text-align: center; }
+
+.news-list .news__pic { float: none; width: auto; }
+
+.news-list .news__content { float: none; width: auto; }
 
 .news-list__item { display: inline-block; vertical-align: top; margin-bottom: 25px; width: 33.3%; box-sizing: border-box; padding-right: 1px; text-align: left; }
 
