@@ -14,7 +14,6 @@
 				$sub = get_field('subtitle');
 				$gray = get_field('gray_text');
 				$position = get_field('position');
-				echo $position;
 				if($position=='Middle'){
 					$class = 'hero-slide-2';
 				}

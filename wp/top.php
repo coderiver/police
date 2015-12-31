@@ -22,19 +22,17 @@
           (044) 254-94-88
         </span>
       </a>
-      <a href="contacts.html" class="header-others">Інші контакти</a>
+      <!-- <a href="contacts.html" class="header-others">Інші контакти</a> -->
     </div>
 
     <div class="header__menu">
       <nav class="main-menu">
-       <!--  <a class="main-menu__link is-active" href="#">Головна</a>
-        <a class="main-menu__link" href="contacts.html">Інші контакти</a> -->
-        <!-- <a class="main-menu__link is-active" href="#">Головна</a>
+        <a class="main-menu__link is-active" href="#">Головна</a>
         <a class="main-menu__link" href="#">Новини</a>
         <a class="main-menu__link" href="#">Детальна інформація</a>
         <a class="main-menu__link" href="#">Контакти</a>
         <a class="main-menu__link" href="#">Часті запитання</a>
-        <a class="main-menu__link" href="#">Online послуги</a> -->
+        <a class="main-menu__link" href="#">Online послуги</a>
       </nav>
 
       <div class="header__right">
