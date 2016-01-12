@@ -1,7 +1,7 @@
 <ul class="list list_main-news">
 <?php 
 // $queryObject = new WP_Query( 'posts_per_page=5' );
-$queryObject = new WP_Query( 'post_type=akcent&posts_per_page=5' );
+$queryObject = new WP_Query( 'post_type=akcent&posts_per_page=3' );
 // The Loop!
 if ($queryObject->have_posts()) {
 

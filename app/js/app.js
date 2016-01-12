@@ -64,4 +64,18 @@ $(document).ready(function() {
     $('#mapUkraine').on('mapRegionChange', function(event, regionID, dotCoord) {
         console.log('regionID: %s, cityX: %d, cityY: %d', regionID, dotCoord[0], dotCoord[1]);
     });
+
+    $('.js-region').change(function(event) {
+      var optionSelected = $("option:selected", this);
+      var valueSelected = this.value;
+      $(this).next().text(optionSelected.text())
+      $('.page-content').attr("class","page-content");
+      $('.page-content').attr("class","page-content "+valueSelected);
+    });
+
+    $('.js-rubrika').change(function(event) {
+      var optionSelected = $("option:selected", this);
+      $('.select__value').text(optionSelected.text())
+      $('.page-content').attr("class","page-content");
+    });
 });

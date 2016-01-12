@@ -256,12 +256,12 @@
   vertical-align: middle
   margin-left: 16px
   &.is-active
-    .lang__list
+    .lang__list,.language-chooser
       visibility: visible
     .icon
       visibility: hidden
 
-.lang__item
+.lang__item,.language-chooser li
   display: block
   +f(r, 12)
   text-transform: uppercase
@@ -269,6 +269,9 @@
   cursor: pointer
   white-space: nowrap
   color: $color-lightgrey
+  a
+    text-decoration: none
+    color: $color-lightgrey
   img
     width: 13px
     height: 10px
@@ -283,7 +286,7 @@
     margin-left: 4px
     top: -1px
 
-.lang__list
+.lang__list,.language-chooser
   visibility: hidden
   position: absolute
   top: -9px
@@ -291,6 +294,6 @@
   padding: 9px 10px
   width: auto
   background: #20335B
-  .lang__item
+  .lang__item,li
     &:not(:first-child)
       margin-top: 12px

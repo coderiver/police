@@ -22,18 +22,17 @@
           (044) 254-94-88
         </span>
       </a>
-      <!-- <a href="contacts.html" class="header-others">Інші контакти</a> -->
+      <a href="/contacts" class="header-others">Інші контакти</a>
     </div>
 
     <div class="header__menu">
-      <nav class="main-menu">
-        <a class="main-menu__link is-active" href="#">Головна</a>
-        <a class="main-menu__link" href="#">Новини</a>
-        <a class="main-menu__link" href="#">Детальна інформація</a>
-        <a class="main-menu__link" href="#">Контакти</a>
-        <a class="main-menu__link" href="#">Часті запитання</a>
-        <a class="main-menu__link" href="#">Online послуги</a>
-      </nav>
+      <!-- <nav class="main-menu">
+        <a class="main-menu__link <?php if(is_home()) echo 'is-active';?>" href="/">Головна</a>
+        <a class="main-menu__link <?php if(is_page('news')) echo 'is-active';?>" href="/news">Новини</a>
+        <a class="main-menu__link <?php if(is_page('akcents')) echo 'is-active';?>" href="/akcents">Детальна інформація</a>
+        <a class="main-menu__link <?php if(is_page('contacts')) echo 'is-active';?>" href="/contacts">Контакти</a>
+        <a class="main-menu__link <?php if(is_page('faq')) echo 'is-active';?>" href="/faq">Часті запитання</a>
+      </nav> -->
 
       <div class="header__right">
         <form action="" class="global-search">
@@ -42,21 +41,24 @@
         </form>
 
         <div class="lang">
+        
+
           <div class="lang__item">
-            <span>Українською</span>
+            <span><?php echo __('[:ua]Українською[:][:ru]По-русски[:]');?></span>
             <i class="icon icon-chevron-down"></i>
           </div>
-          <ul class="lang__list">
+          <?php 
+          
+          qtranxf_generateLanguageSelectCode('both');
+          ?>
+         <!--  <ul class="lang__list">
             <li class="lang__item">
               <span>Українською</span>
             </li>
             <li class="lang__item">
               <span>По-русски</span>
             </li>
-            <li class="lang__item">
-              <span>English</span>
-            </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>
