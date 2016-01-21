@@ -12,7 +12,7 @@
     {
         "name": "Donetsk",
         "id": "donetsk",
-        "active": false
+        "active": true
     },
     {
         "name": "Zhytomyr",
@@ -22,7 +22,7 @@
     {
         "name": "Zaporizhzhia",
         "id": "zaporizhzhia",
-        "active": false
+        "active": true
     },
     {
         "name": "Ivano-Frankivsk",
@@ -42,7 +42,7 @@
     {
         "name": "Luhansk",
         "id": "luhansk",
-        "active": false
+        "active": true
     },
     {
         "name": "Lutsk",
@@ -132,6 +132,6 @@
     {
         "name": "Krym",
         "id": "krym",
-        "active": false
+        "active": true
     }
 ]

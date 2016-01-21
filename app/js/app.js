@@ -23,16 +23,19 @@ $(document).ready(function() {
             }
         });
     });
-
-    $('.hero-slider__slides').slick({
-        slide: '.hero-slide',
-        prevArrow: $('.hero-slider__prev'),
-        nextArrow: $('.hero-slider__next'),
-        autoplaySpeed: 5000,
-        autoplay: true,
-        useCSS: true,
-        dots: true
-    });
+    speed = 0;
+    if($('.hero-slider').length>0){
+        speed = $('.hero-slider').data('speed');
+        $('.hero-slider__slides').slick({
+            slide: '.hero-slide',
+            prevArrow: $('.hero-slider__prev'),
+            nextArrow: $('.hero-slider__next'),
+            autoplaySpeed: speed,
+            autoplay: true,
+            useCSS: true,
+            dots: true
+        });
+    }
 
     $('.hamburger').on('click', function(e) {
         e.preventDefault();
@@ -63,6 +66,8 @@ $(document).ready(function() {
 
     $('#mapUkraine').on('mapRegionChange', function(event, regionID, dotCoord) {
         console.log('regionID: %s, cityX: %d, cityY: %d', regionID, dotCoord[0], dotCoord[1]);
+        $('.page-content').attr("class","page-content");
+        $('.page-content').attr("class","page-content "+regionID);
     });
 
     $('.js-region').change(function(event) {
