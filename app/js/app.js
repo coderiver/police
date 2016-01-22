@@ -10,6 +10,7 @@ require('../map/map-ukraine');
 
 $(document).ready(function() {
     var scrollArea = $('[data-scroller]');
+    var speed = 0;
 
     document.querySelector('.lang').addEventListener('click', function() {
         this.classList.toggle('is-active');
@@ -23,8 +24,8 @@ $(document).ready(function() {
             }
         });
     });
-    speed = 0;
-    if($('.hero-slider').length>0){
+
+    if ($('.hero-slider').length > 0 ) {
         speed = $('.hero-slider').data('speed');
         $('.hero-slider__slides').slick({
             slide: '.hero-slide',
@@ -66,21 +67,21 @@ $(document).ready(function() {
 
     $('#mapUkraine').on('mapRegionChange', function(event, regionID, dotCoord) {
         console.log('regionID: %s, cityX: %d, cityY: %d', regionID, dotCoord[0], dotCoord[1]);
-        $('.page-content').attr("class","page-content");
-        $('.page-content').attr("class","page-content "+regionID);
+        $('.page-content').attr('class', 'page-content');
+        $('.page-content').attr('class', 'page-content ' + regionID);
     });
 
     $('.js-region').change(function(event) {
-      var optionSelected = $("option:selected", this);
-      var valueSelected = this.value;
-      $(this).next().text(optionSelected.text())
-      $('.page-content').attr("class","page-content");
-      $('.page-content').attr("class","page-content "+valueSelected);
+        var optionSelected = $('option:selected', this);
+        var valueSelected = this.value;
+        $(this).next().text(optionSelected.text());
+        $('.page-content').attr('class', 'page-content');
+        $('.page-content').attr('class', 'page-content ' + valueSelected);
     });
 
     $('.js-rubrika').change(function(event) {
-      var optionSelected = $("option:selected", this);
-      $('.select__value').text(optionSelected.text())
-      $('.page-content').attr("class","page-content");
+        var optionSelected = $('option:selected', this);
+        $('.select__value').text(optionSelected.text());
+        $('.page-content').attr('class', 'page-content');
     });
 });

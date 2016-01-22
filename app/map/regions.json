@@ -2,32 +2,32 @@
     {
         "name": "Vinnytsia",
         "id": "vinnytsia",
-        "active": true
+        "active": false
     },
     {
         "name": "Dnipropetrovsk",
         "id": "dnipropetrovsk",
-        "active": true
+        "active": false
     },
     {
         "name": "Donetsk",
         "id": "donetsk",
-        "active": true
+        "active": false
     },
     {
         "name": "Zhytomyr",
         "id": "zhytomyr",
-        "active": true
+        "active": false
     },
     {
         "name": "Zaporizhzhia",
         "id": "zaporizhzhia",
-        "active": true
+        "active": false
     },
     {
         "name": "Ivano-Frankivsk",
         "id": "ivano-frankivsk",
-        "active": true
+        "active": false
     },
     {
         "name": "Kyiv",
@@ -37,17 +37,17 @@
     {
         "name": "Kirovohrad",
         "id": "kirovohrad",
-        "active": true
+        "active": false
     },
     {
         "name": "Luhansk",
         "id": "luhansk",
-        "active": true
+        "active": false
     },
     {
         "name": "Lutsk",
         "id": "lutsk",
-        "active": true
+        "active": false
     },
     {
         "name": "Lviv",
@@ -57,7 +57,7 @@
     {
         "name": "Mykolaiv",
         "id": "mykolaiv",
-        "active": true
+        "active": false
     },
     {
         "name": "Odesa",
@@ -67,71 +67,71 @@
     {
         "name": "Poltava",
         "id": "poltava",
-        "active": true
+        "active": false
     },
     {
         "name": "Rivne",
         "id": "rivne",
-        "active": true
+        "active": false
     },
     {
         "name": "Sevastopol",
         "id": "sevastopol",
-        "active": true
+        "active": false
     },
     {
         "name": "Simferopol",
         "id": "simferopol",
-        "active": true
+        "active": false
     },
     {
         "name": "Sumy",
         "id": "sumy",
-        "active": true
+        "active": false
     },
     {
         "name": "Ternopil",
         "id": "ternopil",
-        "active": true
+        "active": false
     },
     {
         "name": "Uzhhorod",
         "id": "uzhhorod",
-        "active": true
+        "active": false
     },
     {
         "name": "Kharkiv",
         "id": "kharkiv",
-        "active": true
+        "active": false
     },
     {
         "name": "Kherson",
         "id": "kherson",
-        "active": true
+        "active": false
     },
     {
         "name": "Khmelnytskyi",
         "id": "khmelnytskyi",
-        "active": true
+        "active": false
     },
     {
         "name": "Cherkasy",
         "id": "cherkasy",
-        "active": true
+        "active": false
     },
     {
         "name": "Chernivtsi",
         "id": "chernivtsi",
-        "active": true
+        "active": false
     },
     {
         "name": "Chernihiv",
         "id": "chernihiv",
-        "active": true
+        "active": false
     },
     {
         "name": "Krym",
         "id": "krym",
-        "active": true
+        "active": false
     }
 ]

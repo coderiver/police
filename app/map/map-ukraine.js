@@ -1,4 +1,5 @@
 var mapContainer = $('#mapUkraine');
+var mapInstance = null;
 
 var MapUkraine = (function() {
     var REGION_ENTER   = 'mapRegionEnter';
@@ -103,5 +104,7 @@ var MapUkraine = (function() {
 })();
 
 if (mapContainer.length) {
-    new MapUkraine(mapContainer, '../img/map-ukraine.svg');
+    mapInstance = new MapUkraine(mapContainer, '../img/map-ukraine.svg');
 }
+
+module.exports = mapInstance;
