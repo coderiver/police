@@ -10,7 +10,7 @@
     <header class="article article-head" <?php post_class() ?> id="post-<?php the_ID(); ?>">
       <h1 class="title-thin"><?php the_title(); ?></h1>
       <p>
-        <?php the_excerpt(); ?>
+        <?php the_field('lead'); ?>
       </p>
 
       <div class="share share_vert">
@@ -27,6 +27,10 @@
 
       <article class="l-article__content article">
         <?php the_content(); ?>
+
+        <div class="article__source">
+          <?php the_field('source'); ?>
+        </div>
         
         <div class="share ">
           <a href="#" class="share-btn icon icon-facebook"></a>

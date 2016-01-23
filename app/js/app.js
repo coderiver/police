@@ -69,6 +69,7 @@ $(document).ready(function() {
         console.log('regionID: %s, cityX: %d, cityY: %d', regionID, dotCoord[0], dotCoord[1]);
         $('.page-content').attr('class', 'page-content');
         $('.page-content').attr('class', 'page-content ' + regionID);
+        $(".js-region").val(regionID).trigger('change');
     });
 
     $('.js-region').change(function(event) {

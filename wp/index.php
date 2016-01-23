@@ -7,7 +7,7 @@
 <div class="l-main-page__left">
   <!-- BEGIN news -->
   <div class="head">
-    <h3 class="title">Новини</h3>
+    <h3 class="title"><a href='/news'>Новини</a></h3>
   </div>
 
   <?php get_template_part( 'homepage-news' ); ?>
@@ -20,7 +20,7 @@
 <div class="l-main-page__right">
   <!-- BEGIN akcents -->
   <div class="head">
-    <h3 class="title">Акценти</h3>
+    <h3 class="title"><a href="/akcents">Акценти</a></h3>
   </div>
 
   <?php get_template_part( 'homepage-akcents' ); ?>

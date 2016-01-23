@@ -593,6 +593,10 @@ em, i { font-family: "OpenSans-LightItalic"; font-weight: normal; }
 
 .social-btn__inner { position: relative; z-index: 1; display: inline-block; vertical-align: middle; font-size: 14px; }
 
+.wp-caption-text { margin: 0 !important; color: #999; display: block; text-align: right; font-size: 10px; }
+
+.wp-caption { width: auto !important; }
+
 .article { font-style: 14px; line-height: 1.57; }
 
 .article figure img { width: 100%; }
@@ -605,7 +609,7 @@ em, i { font-family: "OpenSans-LightItalic"; font-weight: normal; }
 
 .article p:last-child, .article ul:last-child, .article ol:last-child { margin-bottom: 0; }
 
-.article img { max-width: 100%; }
+.article img { max-width: 100%; height: auto !important; width: auto !important; }
 
 .article > img { display: block; margin: 5.55556% 0; }
 
@@ -616,6 +620,8 @@ em, i { font-family: "OpenSans-LightItalic"; font-weight: normal; }
 .article ul > li:before { content: "- "; }
 
 .article ol { list-style: decimal; padding-left: 18px; }
+
+.article__source { color: #8a92a1; font-style: italic; }
 
 .article__title { margin-bottom: 24px; font-family: "OpenSans-Regular"; font-weight: normal; font-size: 18px; line-height: 1.667; }
 

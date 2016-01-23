@@ -1,9 +1,18 @@
+.wp-caption-text
+  margin: 0 !important 
+  color: #999
+  display: block
+  text-align: right
+  font-size: 10px
+.wp-caption
+  width: auto !important
 .article
   font-style: 14px
   line-height: 1.57
   figure
     img
       width: 100%
+      
     figcaption
       color: #999
       display: block
@@ -17,6 +26,8 @@
       margin-bottom: 0
   img
     max-width: 100%
+    height: auto !important
+    width: auto !important
   > img
     display: block
     margin: percentage(40/720) 0
@@ -36,7 +47,9 @@
       margin-left: -10px
       margin-right: -10px
       max-width: calc(100% + 20px)
-
+.article__source
+  color: #8a92a1 
+  font-style: italic
 .article__title
   margin-bottom: 24px
   +f(r, 18)

@@ -1,6 +1,6 @@
 <!-- BEGIN hero -->
 <div class="hero">
-  <div class="hero-slider">
+  <div class="hero-slider" data-speed="<?php the_field('speed', 77); ?>">
     <div class="hero-slider__slides">
 		<!-- begin slides -->
 		<?php

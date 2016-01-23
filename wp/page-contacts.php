@@ -21,7 +21,7 @@
             <?php endforeach; ?>
           </select>
           <div class="select__value">
-            Киев
+            <?php echo $allterms[0]->name; ?>
           </div>
           <div class="select__arrow icon icon-select"></div>
         </div>
