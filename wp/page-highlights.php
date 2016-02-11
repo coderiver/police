@@ -4,13 +4,13 @@
 <div class="page-content">
   <div class="l">
 
-    <header class="content-header">
+    <header class="content-header" style="display:none">
       <div class="content-header__left">
         <h3 class="title title_link">
-          <a href="/news">Новини</a>
+          <a href="/news"><?php echo __('<!--:ru-->Новости<!--:--><!--:ua-->Новини<!--:-->');?></a>
         </h3>
         <h3 class="title title_link is-active">
-          <a href="/akcents">Акценти</a>
+          <a href="/highlights"><?php echo __('<!--:ru-->Акценты<!--:--><!--:ua-->Акценти<!--:-->');?></a>
         </h3>
       </div>
       <div class="content-header__right">
@@ -29,7 +29,7 @@
       <?php 
       $args_fp = array(
         'posts_per_page' => 15,
-        'post_type' => 'akcent'
+        'post_type' => 'highlight'
       );
       $queryObject = new WP_Query( $args_fp );
       // The Loop!
@@ -59,9 +59,9 @@
       ?>
     </ul>
 
-    <div class="align-center">
-      <a href="/" class="btn btn_md"><span class="btn__text">Завантажити ще</span></a>
-    </div>
+   <!--  <div class="align-center">
+      <a href="/" class="btn btn_md"><span class="btn__text"><?php echo __('<!--:ru-->Загрузить еще<!--:--><!--:ua-->Завантажити ще<!--:-->');?></span></a>
+    </div> -->
 
   </div>
 </div>

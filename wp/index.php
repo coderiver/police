@@ -7,26 +7,26 @@
 <div class="l-main-page__left">
   <!-- BEGIN news -->
   <div class="head">
-    <h3 class="title"><a href='/news'>Новини</a></h3>
+    <h3 class="title"><a href='/news'><?php echo __('<!--:ru-->Новости<!--:--><!--:ua-->Новини<!--:-->');?></a></h3>
   </div>
 
   <?php get_template_part( 'homepage-news' ); ?>
 
   <div class="align-right">
-    <a href="/news" class="btn"><span class="btn__text">Усі новини</span></a>
+    <a href="/news" class="btn"><span class="btn__text"><?php echo __('<!--:ru-->Все новости<!--:--><!--:ua-->Усі новини<!--:-->');?></span></a>
   </div>
   <!-- END news -->
 </div>
 <div class="l-main-page__right">
   <!-- BEGIN akcents -->
   <div class="head">
-    <h3 class="title"><a href="/akcents">Акценти</a></h3>
+    <h3 class="title"><a href="/highlights"><?php echo __('<!--:ru-->Акценты<!--:--><!--:ua-->Акценти<!--:-->');?></a></h3>
   </div>
 
   <?php get_template_part( 'homepage-akcents' ); ?>
   
   <div class="align-right">
-  	<a href="/akcents" class="btn"><span class="btn__text">Усі акценти</span></a>
+  	<a href="/highlights" class="btn"><span class="btn__text"><?php echo __('<!--:ru-->Все акценты<!--:--><!--:ua-->Усі акценти<!--:-->');?></a></span></a>
   </div>
   <!-- END akcents -->
 </div>

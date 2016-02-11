@@ -102,11 +102,12 @@
   .icon-phone
     font-size: em(22,27)
     color: #5F6778
+    color: #ffde00 
     position: relative
     top: 1px
   +rmin(1200)
     &:not(:last-child)
-      margin-right: 110px
+      // margin-right: 110px
 
 .header-call__number
   display: inline-block
@@ -287,13 +288,15 @@
     top: -1px
 
 .lang__list,.language-chooser
-  visibility: hidden
-  position: absolute
-  top: -9px
-  left: -10px
-  padding: 9px 10px
+  // visibility: hidden
+  // position: absolute
+  // top: -9px
+  // left: -10px
+  // padding: 9px 10px
   width: auto
-  background: #20335B
+  // background: #20335B
+  .active
+    display: none
   .lang__item,li
-    &:not(:first-child)
-      margin-top: 12px
+    // &:not(:first-child)
+    //   margin-top: 12px

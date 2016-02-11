@@ -46,9 +46,13 @@ em, i
 // @each $flag in $flags
 //   .flag-#{$flag}
 //     background-image: svg('#{$flag}.svg')
-
+a
+  color: #1f5b7c 
+  &:hover
+    text-decoration: none
 .hero
   margin-bottom: 85px
+  margin-bottom: 52px
   background: linear-gradient( 0deg, rgb(30,48,84) 0%, rgb(40,61,105) 100%)
   +md
     margin-bottom: 45px
@@ -106,6 +110,8 @@ em, i
 .list__item
   border: 1px solid $color-grey-border
   border-width: 0 0 1px 0
+  .list_main-news &
+    border: none !important 
   &:first-child
     border-width: 1px 0
 
@@ -137,7 +143,7 @@ em, i
 .event__left
   position: absolute
   top: 14px
-  left: 0
+  left: 4px
   width: 100px
   text-align: center
 
@@ -152,6 +158,8 @@ em, i
   color: $color-lightgrey
   text-transform: uppercase
   font-size: 12px
+  text-align: left
+  padding-left: 10px 
 
 .event__text
   font-size: 14px
@@ -252,7 +260,8 @@ em, i
         width: percentage(320/550)
 
       .news__content
-        padding: 30px 0 0 percentage(40/550)
+        padding: 10px 0 0 percentage(40/550)
+        padding: 0 0 0 percentage(25/550)
         float: right
         width: percentage(230/550)
   &:hover
@@ -271,12 +280,15 @@ em, i
   max-height: 200px
   height: 0
   padding-bottom: 41%
+  padding-bottom: 63%
   background-size: cover
   background-color: #fafafa
   background-position: 50% 50%
   background-repeat: no-repeat
   overflow: hidden
   width: percentage(320/550)
+  .list_main-news &
+    padding-bottom: 41%
   +md
     width: auto
   img
@@ -295,10 +307,13 @@ em, i
 .news__text
   font-size: 18px
   line-height: 1.667
+  padding-right: 20px 
 .news__date
   color: #999
   font-size: 12px
   margin-left: 10px
+  display: block
+  margin-left: 0 
 
 .news__arrow
   margin-top: 22px

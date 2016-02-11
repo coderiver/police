@@ -61,21 +61,58 @@ function simpla_wp_title( $title, $sep ) {
 		return $title;
 
 	// Add the blog name
-	$title .= get_bloginfo( 'name' );
+	// $title .= ' | '.get_bloginfo( 'name' );
 
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title .= " $sep $site_description";
+	if ( $site_description && ( is_home() || is_front_page() ) ){
+        $title .= get_bloginfo( 'name' );
+		$title .= " | $site_description  ";
+    }
+    else{
+        $title .= ' | '.get_bloginfo( 'name' );
+    }
 
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'simpla' ), max( $paged, $page ) );
+	
 
 	return $title;
 }
 add_filter( 'wp_title', 'simpla_wp_title', 10, 2 );
 
+
+
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'start_post_rel_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'adjacent_posts_rel_link');
+
+// add_filter( 'wp_title', 'filter_wp_title' );
+/**
+ * Filters the page title appropriately depending on the current page
+ *
+ * This function is attached to the 'wp_title' fiilter hook.
+ *
+ * @uses    get_bloginfo()
+ * @uses    is_home()
+ * @uses    is_front_page()
+ */
+// function filter_wp_title( $title ) {
+//     global $page, $paged;
+
+//     if ( is_feed() )
+//         return $title;
+
+//     $site_description = get_bloginfo( 'description' );
+
+//     $filtered_title = $title . get_bloginfo( 'name' );
+//     $filtered_title .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description: '';
+//     $filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) ) : '';
+
+//     return $filtered_title;
+// }
+?>
 
 
 

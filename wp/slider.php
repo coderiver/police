@@ -13,13 +13,14 @@
 				$image = get_field('image');
 				$sub = get_field('subtitle');
 				$gray = get_field('gray_text');
-				$position = get_field('position');
-				if($position=='Middle'){
-					$class = 'hero-slide-2';
-				}
-				else{
-					$class = 'hero-slide-1';
-				}
+				// $position = get_field('position');
+				// if($position=='Middle'){
+				// 	$class = 'hero-slide-2';
+				// }
+				// else{
+				// 	$class = 'hero-slide-2';
+				// }
+				$class = 'hero-slide-2';
 				?>
 
 
@@ -30,7 +31,7 @@
 				    <p><?php echo $sub; ?></p>
 
 					<?php $link = get_field('link'); if ($link != '') {
-						echo '<a href="'.$link.'" class="link-more">Детальніше <i class="icon icon-more"></i></a>';
+						echo '<a href="'.$link.'" class="link-more">'.__('<!--:ru-->Детальнее<!--:--><!--:ua-->Детальніше<!--:-->').' <i class="icon icon-more"></i></a>';
 					} else {?>
 						<span class="hero-slide__link">
 					    <?php echo $gray; ?>

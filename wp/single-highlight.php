@@ -9,48 +9,52 @@
 
     <header class="article article-head" <?php post_class() ?> id="post-<?php the_ID(); ?>">
       <h1 class="title-thin"><?php the_title(); ?></h1>
+      <!-- <p class="article__date"><?php echo get_the_date('H:i',$recent["ID"]).' '.get_the_date('d.m.Y',$recent["ID"]).'</span>'; ?></p> -->
       <p>
         <?php the_field('lead'); ?>
       </p>
 
       <div class="share share_vert">
-        <a href="#" class="share-btn icon icon-facebook"></a>
-        <a href="#" class="share-btn icon icon-twitter"></a>
+        <a href="#" onclick="Share.facebook('<?php echo get_permalink(); ?>','<?php echo get_the_title(); ?>', 'http://manapoints.com/wp-content/uploads/2016/02/police-logo.png');return false;" class="share-btn icon icon-facebook"></a>
+        <a href="#" onclick="Share.twitter('<?php echo get_permalink(); ?>','<?php echo get_the_title(); ?>');return false;" class="share-btn icon icon-twitter"></a>
       </div>
     </header>
 
     <div class="l-article">
       <aside class="l-article__aside article-aside">
-        <h4 class="title title_xm"><a href='/news'>Новини</a></h4>
-        <h4 class="title title_xm"><a href='/akcents'>Акценти</a></h4>
+        <p class="article__date"><?php echo get_the_date('d.m.Y',$recent["ID"]).'<br> '.get_the_date('H:i',$recent["ID"]).'</span>'; ?></p>
+        <div class="article__source">
+          <?php the_field('source'); ?>
+        </div>
+
+        <!-- <h4 class="title title_xm"><a href='/news'><?php echo __('<!--:ru-->Новости<!--:--><!--:ua-->Новини<!--:-->');?></a></h4>
+        <h4 class="title title_xm"><a href='/highlights'><?php echo __('<!--:ru-->Акценты<!--:--><!--:ua-->Акценти<!--:-->');?></a></h4> -->
       </aside>
 
       <article class="l-article__content article">
         <?php the_content(); ?>
 
-        <div class="article__source">
-          <?php the_field('source'); ?>
-        </div>
+        
         
         <div class="share ">
-          <a href="#" class="share-btn icon icon-facebook"></a>
-          <a href="#" class="share-btn icon icon-twitter"></a>
+          <a href="#" onclick="Share.facebook('<?php echo get_permalink(); ?>','<?php echo get_the_title(); ?>', 'http://manapoints.com/wp-content/uploads/2016/02/police-logo.png');return false;" class="share-btn icon icon-facebook"></a>
+          <a href="#" onclick="Share.twitter('<?php echo get_permalink(); ?>','<?php echo get_the_title(); ?>');return false;" class="share-btn icon icon-twitter"></a>
         </div>
 
       </article>
     </div>
 
-    <h4 class="title-thin">Читайте ще:</h4>
+    <h4 class="title-thin"><?php echo __('<!--:ru-->Читайте также<!--:--><!--:ua-->Читайте також<!--:-->');?></h4>
     <ul class="news-list">
           <?php 
           $th = $post->ID;
           $args_fp = array(
             'post__not_in' => array($th),
             'posts_per_page' => 3,
-            'post_type' => 'akcent'
+            'post_type' => 'highlight'
           );
           $queryObject = new WP_Query( $args_fp );
-          print_r($queryObject);
+          // print_r($queryObject);
           // The Loop!
           if ($queryObject->have_posts()) {
 

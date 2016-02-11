@@ -46,6 +46,18 @@
             display: block;
           }
         </style>
+        <script type="text/javascript">
+          jQuery(document).ready(function() {
+            jQuery(window).on('mapadded', function(event) {
+
+            <?php 
+            foreach ($allterms as &$value)
+                echo $value = "jQuery('#".$value->slug."').attr('class','');";
+            ?>
+            jQuery('#kyiv').attr('class','active');
+            });
+          });
+        </script>
 
         
         <?php
@@ -80,10 +92,10 @@
             <?php if( get_field('address') ): ?>
               <li><i class="icon icon-location"></i><?php the_field('address'); ?></li>
             <?php endif; ?>
-            <?php if( get_field('address') ): ?>
+            <?php if( get_field('phone') ): ?>
               <li><i class="icon icon-phone2"></i><?php the_field('phone'); ?></li>
             <?php endif; ?>
-            <?php if( get_field('address') ): ?>
+            <?php if( get_field('facebook') ): ?>
               <li><i class="icon icon-facebook"></i><?php the_field('facebook'); ?></li>
             <?php endif; ?>
             
@@ -102,6 +114,9 @@
       <div class="contacts__right" id="mapUkraine">
        <!-- <img src="img/mapu.png" alt=""> -->
 
+      </div>
+      <div class="contacts__map">
+        <? the_field('text',29);?>
       </div>
       <!-- end contacts__right -->
     </div>

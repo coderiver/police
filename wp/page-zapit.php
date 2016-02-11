@@ -26,8 +26,17 @@
 
     <!-- begin form  -->
     <div class="form">
-      <h2>зворотній зв’язок</h2>
-      <?php echo do_shortcode('[contact-form-7 id="49" title="Zapit"]'); ?>
+      <h2><?php echo __('<!--:ru-->Обратная связь<!--:--><!--:ua-->зворотній зв’язок<!--:-->');?></h2>
+      <?php  
+             if ( qtrans_getLanguage() == 'ru' ) {
+                echo do_shortcode('[contact-form-7 id="183" title="Zapit_ru"]');
+             }
+             elseif ( qtrans_getLanguage() == 'ua' ) {
+                echo do_shortcode('[contact-form-7 id="49" title="Zapit"]');
+             }
+         ?>
+      
+      
     </div>
     <!-- end form -->
 

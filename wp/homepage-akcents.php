@@ -1,7 +1,7 @@
 <ul class="list list_main-news">
 <?php 
 // $queryObject = new WP_Query( 'posts_per_page=5' );
-$queryObject = new WP_Query( 'post_type=akcent&posts_per_page=3' );
+$queryObject = new WP_Query( 'post_type=highlight&posts_per_page=3' );
 // The Loop!
 if ($queryObject->have_posts()) {
 
@@ -17,7 +17,7 @@ if ($queryObject->have_posts()) {
 		// echo '   <img src="'.$image['url'].'" alt="">';
 		echo ' </div>';
 		echo ' <div class="news__content">';
-		echo '   <p class="news__text">'.the_title().' <span class="news__date">'.get_the_date('d.m.Y',$post->ID).'</span></p>';
+		echo '   <p class="news__text">'.get_the_title().' <span class="news__date">'.get_the_date('d.m.Y',$post->ID).'</span></p>';
 		echo '   <i class="news__arrow icon icon-arrow-right"></i>';
 		echo ' </div>';
 

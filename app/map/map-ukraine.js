@@ -97,6 +97,7 @@ var MapUkraine = (function() {
         self._load().then(function() {
             self._bindEvents();
             self.container.append(self.svg);
+            $(window).trigger('mapadded');
         });
     };
 

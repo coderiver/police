@@ -5,13 +5,13 @@
   <div class="page-content">
     <div class="l">
 
-      <header class="content-header">
+      <header class="content-header" style="display:none">
         <div class="content-header__left">
           <h3 class="title title_link is-active">
-            <a href="/news">Новини</a>
+            <a href="/news"><?php echo __('<!--:ru-->Новости<!--:--><!--:ua-->Новини<!--:-->');?></a>
           </h3>
           <h3 class="title title_link">
-            <a href="/akcents">Акценти</a>
+            <a href="/highlights"><?php echo __('<!--:ru-->Акценты<!--:--><!--:ua-->Акценти<!--:-->');?></a>
           </h3>
         </div>
         <div class="content-header__right">
@@ -34,7 +34,7 @@
 
             <?php
               $th = $post->ID;
-                $args = array( 'numberposts' => '10' );
+                $args = array( 'numberposts' => '50' );
                 $recent_posts = wp_get_recent_posts( $args );
 
                 foreach( $recent_posts as $recent ){
@@ -56,7 +56,7 @@
         </div>
 
         <div class="l-news-page__right">
-          <hr class="divider">
+          <!-- <hr class="divider"> -->
           <article class="article" <?php post_class() ?> id="post-<?php the_ID(); ?>">
             <h3 class="article__title">
               <?php the_title(); ?>
@@ -65,8 +65,8 @@
           </article>
 
           <div class="share">
-            <a href="#" class="share-btn icon icon-facebook"></a>
-            <a href="#" class="share-btn icon icon-twitter"></a>
+            <a href="#" onclick="Share.facebook('<?php echo get_permalink(); ?>','<?php echo get_the_title(); ?>', 'http://manapoints.com/wp-content/uploads/2016/02/police-logo.png');return false;" class="share-btn icon icon-facebook"></a>
+            <a href="#" onclick="Share.twitter('<?php echo get_permalink(); ?>','<?php echo get_the_title(); ?>');return false;" class="share-btn icon icon-twitter"></a>
           </div>
         </div>
 

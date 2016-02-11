@@ -3,7 +3,8 @@
   z-index: 0
   .slick-dots
     position: absolute
-    bottom: 10px
+    // bottom: 10px
+    top: 34px 
     left: 0
     right: 0
     max-width: 960px
@@ -93,11 +94,13 @@
   &-2
     .hero-slide__image
       right: percentage(-85/960)
-      bottom: 98px
+      // bottom: 98px
+      bottom: 50%
+      transform: translate(0, 50%) 
     .hero-slide__content
       max-width: percentage(430/960)
     .link-more
-      margin-top: 26px
+      // margin-top: 26px
 
   +md
     .hero-slide__content
@@ -124,6 +127,7 @@
   max-width: percentage(490/960)
   font-size: 18px
   padding: 0 0 25px 10px
+  padding-left: 0 
 
 .hero-slide__image
   position: absolute

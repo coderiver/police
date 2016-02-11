@@ -67,7 +67,7 @@
             <!-- begin vacancy  -->
             <div class="vacancy <?php echo 'vac-'.$t;?>">
               <div class="vacancy__title"><?php the_title();?></div>
-              <a href='<?php echo $file;?>' class="vacancy__download"><i class="icon icon-pdf"></i><span>Завантажити детали вакансії</span></a>
+              <a href='<?php echo $file;?>' class="vacancy__download"><i class="icon icon-pdf"></i><span><?php echo __('<!--:ru-->Загрузить детали вакансии<!--:--><!--:ua-->Завантажити деталі вакансії<!--:-->');?></span></a>
             </div>
             <!-- end vacancy -->
           <?php } ?>

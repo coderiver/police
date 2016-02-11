@@ -9,17 +9,25 @@ $map-main-color: #CCD4E2
     cursor: pointer
     &:hover
       fill: rgba($map-main-color, 0.2)
+      
     // &.active
     //   fill: #FFDE00
     &.inactive
       fill: rgba($map-main-color, 0.5)
+    &.active
+      fill: rgba(#ffde00,.5)
 
+#map-marker
+  display: none !important
 #cities
   pointer-events: none
+  // fix
+  display: none !important
   circle
     fill: $map-main-color
     &.active
       fill: #19294A
+      // fill: #ffde00
     &.inactive
       display: none
 
