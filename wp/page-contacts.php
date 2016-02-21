@@ -86,11 +86,11 @@
             </p>
           
           <p class="contact__schedule">
-            <?php echo $time;?>  <span><?php echo $days;?></span>
+            <?php echo $time;?>  
           </p>
           <ul class="contact__info">
             <?php if( get_field('address') ): ?>
-              <li><i class="icon icon-location"></i><?php the_field('address'); ?></li>
+              <li><i class="icon icon-location"></i><?php the_field('address'); ?> <span><?php echo $days;?></span></li>
             <?php endif; ?>
             <?php if( get_field('phone') ): ?>
               <li><i class="icon icon-phone2"></i><?php the_field('phone'); ?></li>
@@ -116,7 +116,22 @@
 
       </div>
       <div class="contacts__map">
-        <? the_field('text',29);?>
+        <div class="contacts__text">
+        <?php
+        $content_post = get_page_by_path('contacts'); 
+        $content = $content_post->post_content;
+        $content = apply_filters('the_content', $content);
+        echo $content;
+        // if ( qtrans_getLanguage() == 'ru' ) {
+        //   the_field('text_ru',29);
+        // }
+        // else{
+        //   the_field('text_ua',29);
+        // }
+
+         
+        ?>
+        </div>
       </div>
       <!-- end contacts__right -->
     </div>

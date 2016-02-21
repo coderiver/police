@@ -126,6 +126,8 @@ a
   box-sizing: border-box
   padding: 14px 0 10px 112px
   +trans(box-shadow)
+  .l-news-page &
+    padding: 14px 0 10px 120px
   &:hover,&.is-active
     box-shadow: -5px 0 0 0 $color-yellow
     .ps-container &
@@ -144,8 +146,11 @@ a
   position: absolute
   top: 14px
   left: 4px
+  left: 4px 
   width: 100px
   text-align: center
+  .l-news-page &
+    left: 11px 
 
 .event__time
   display: block
@@ -465,6 +470,13 @@ a
   .title
     display: inline-block
     margin-right: 24px
+  .menu
+    li
+      display: inline-block
+    .current_page_item
+      h3 a
+        color: $color-darkblue
+
   +sm
     .content-header__left,
     .content-header__right
@@ -481,7 +493,7 @@ a
 .news-list
   font-size: 0
   margin: 0 -1px -25px 0
-  text-align: center
+  text-align: left
   .news__pic
     float: none
     width: auto

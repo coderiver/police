@@ -23,7 +23,15 @@
 	    <a href="https://www.instagram.com/patrolpolice_ua/" class="social-btn social-btn_instagram">
 	      <span class="social-btn__inner">
 	        <i class="icon icon-instagram"></i>
-	        <span>instagram.com/<b>kyiv_police</b></span>
+	        <span>instagram.com/<b>patrolpolice_ua</b></span>
+	      </span>
+	    </a>
+	  </div>
+	  <div class="footer__cell">
+	    <a href="https://www.youtube.com/channel/UCOcd0bZpifXihg1VrqXfytQ" class="social-btn social-btn_youtube">
+	      <span class="social-btn__inner">
+	        <i class="icon icon-youtube"></i>
+	        <span>youtube.com/<b>channel/../</b></span>
 	      </span>
 	    </a>
 	  </div>
@@ -35,5 +43,6 @@
 <!-- BEGIN scripts -->
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
 <!-- END scripts -->
+<?php wp_footer();?>
 </body>
 </html>

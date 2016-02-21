@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* done by good guys */
+/* done by Coderiver.com.ua */
 .clearfix { display: table; width: 100%; clear: both; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
@@ -93,6 +93,8 @@ body { font-family: "OpenSans-Regular"; font-weight: normal; font-size: 14px; li
 .icon-select:before { content: ""; }
 
 .icon-twitter:before { content: ""; }
+
+.icon-youtube:before { content: ""; }
 
 /* Slider */
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
@@ -243,11 +245,15 @@ a:hover { text-decoration: none; }
 
 .event { display: block; text-decoration: none; color: inherit; cursor: pointer; position: relative; min-height: 99px; box-sizing: border-box; padding: 14px 0 10px 112px; transition: box-shadow 0.25s ease; }
 
+.l-news-page .event { padding: 14px 0 10px 120px; }
+
 .event:hover, .event.is-active { box-shadow: -5px 0 0 0 #FFDE00; }
 
 .ps-container .event:hover::after, .ps-container .event.is-active::after { box-shadow: none; position: absolute; left: 0; top: 0; bottom: 0; content: ''; width: 5px; background: #FFDE00; }
 
-.event__left { position: absolute; top: 14px; left: 4px; width: 100px; text-align: center; }
+.event__left { position: absolute; top: 14px; left: 4px; left: 4px; width: 100px; text-align: center; }
+
+.l-news-page .event__left { left: 11px; }
 
 .event__time { display: block; font-size: 36px; line-height: 1; }
 
@@ -365,11 +371,15 @@ a:hover { text-decoration: none; }
 
 .content-header .title { display: inline-block; margin-right: 24px; }
 
+.content-header .menu li { display: inline-block; }
+
+.content-header .menu .current_page_item h3 a { color: #19294A; }
+
 .content-header__left { float: left; }
 
 .content-header__right { float: right; text-align: right; }
 
-.news-list { font-size: 0; margin: 0 -1px -25px 0; text-align: center; }
+.news-list { font-size: 0; margin: 0 -1px -25px 0; text-align: left; }
 
 .news-list .news__pic { float: none; width: auto; }
 
@@ -425,7 +435,7 @@ a:hover { text-decoration: none; }
 
 .l-news-page__left { float: left; width: 330px; margin-right: -330px; box-sizing: border-box; padding-right: 20px; position: relative; overflow: hidden; }
 
-.l-news-page__right { float: right; margin-left: 350px; max-width: 590px; }
+.l-news-page__right { float: right; margin-left: 350px; max-width: 590px; width: 100%; }
 
 .l-article { margin-bottom: 75px; *zoom: 1; }
 
@@ -511,7 +521,7 @@ a:hover { text-decoration: none; }
 
 .lang__item, .language-chooser li { display: block; font-family: "OpenSans-Regular"; font-weight: normal; font-size: 12px; text-transform: uppercase; line-height: 1; cursor: pointer; white-space: nowrap; color: #A1A1A1; }
 
-.lang__item a, .language-chooser li a { text-decoration: none; color: #A1A1A1; }
+.lang__item a, .language-chooser li a { text-decoration: none; color: #A1A1A1; background: none !important; }
 
 .lang__item img, .language-chooser li img { width: 13px; height: 10px; margin-right: 4px; }
 
@@ -522,6 +532,8 @@ a:hover { text-decoration: none; }
 .lang__list, .language-chooser { width: auto; }
 
 .lang__list .active, .language-chooser .active { display: none; }
+
+.lang__list .lang__item:last-child, .lang__list li:last-child, .language-chooser .lang__item:last-child, .language-chooser li:last-child { display: none; }
 
 .hero-slider { position: relative; z-index: 0; }
 
@@ -601,13 +613,17 @@ a:hover { text-decoration: none; }
 
 .social-btn_instagram { background: #2A5B83; }
 
+.social-btn_youtube { background: #e2302f; }
+
+.social-btn_youtube .icon { font-size: 31px; position: relative; top: -3px; }
+
 .social-btn__inner { position: relative; z-index: 1; display: inline-block; vertical-align: middle; font-size: 14px; }
 
 .wp-caption-text { margin: 0 !important; color: #999; display: block; text-align: left; font-size: 10px; }
 
 .wp-caption { width: auto !important; }
 
-.article { font-style: 14px; line-height: 1.57; }
+.article { font-size: 14px; line-height: 1.57; }
 
 .article .article__date { font-size: 80%; color: #999; margin-top: -15px; }
 
@@ -620,6 +636,14 @@ a:hover { text-decoration: none; }
 .article p:first-child, .article ul:first-child, .article ol:first-child { margin-top: 0; }
 
 .article p:last-child, .article ul:last-child, .article ol:last-child { margin-bottom: 0; }
+
+.article h2 { font-weight: normal; font-size: 22px; color: #1a2a49; margin: 0; }
+
+.article h3 { font-weight: bold; font-size: 17px; color: #1a2a49; margin: 0; }
+
+.article h4 { font-size: 15px; color: #1a2a49; font-style: italic; font-weight: bold; }
+
+.article h2 + p, .article h3 + p, .article h4 + p { margin-top: 4px; }
 
 .article img { max-width: 100%; height: auto !important; width: auto !important; }
 
@@ -656,6 +680,8 @@ a:hover { text-decoration: none; }
 .contacts__right { overflow: hidden; padding-right: 30px; float: none; width: auto; }
 
 .contacts__right img { width: 100%; }
+
+.contacts__text p { margin-bottom: 1em; }
 
 .contacts__map { overflow: hidden; padding-right: 30px; padding-top: 20px; }
 
@@ -703,13 +729,15 @@ textarea { height: 124px; }
 
 .form .form__field label { margin-bottom: 12px; font-style: 16px; display: block; }
 
+.contact__info span { color: #a1a1a1; display: block; margin-top: 5px; }
+
 .contact { margin-top: 50px; font-size: 16px; line-height: 24px; color: #1a2a49; }
 
 .contact p { margin-bottom: 14px; }
 
 .contact__schedule { font-size: 14px; }
 
-.contact__schedule span { color: #a1a1a1; text-transform: uppercase; }
+.contact__schedule span { color: #a1a1a1; text-transform: uppercase; display: block; margin-top: 5px; }
 
 .contact ul { font-size: 14px; margin-top: 35px; }
 
@@ -719,11 +747,11 @@ textarea { height: 124px; }
 
 .contact li i.icon-facebook { color: #fff; font-size: 13px; width: 21px; border-radius: 50%; line-height: 21px; height: 21px; background: #fedc32; text-align: center; }
 
-.q { display: block; text-decoration: none; padding: 14px 14px 20px 73px; position: relative; font-size: 14px; color: #1a2a49; line-height: 22px; min-height: 40px; }
+.q { display: block; text-decoration: none; padding: 14px 14px 20px 14px; position: relative; font-size: 14px; color: #1a2a49; line-height: 22px; min-height: 40px; }
 
 .q.is-active::before, .q:hover::before { position: absolute; left: 0; top: 0; content: ''; bottom: 0; width: 5px; background: #fedc32; }
 
-.q .q__num { font-family: "OpenSans-Light"; font-weight: normal; font-size: 36px; position: absolute; left: 14px; line-height: 1; }
+.q .q__num { font-family: "OpenSans-Light"; font-weight: normal; font-size: 36px; position: absolute; left: 14px; display: none; line-height: 1; }
 
 @media only screen and (max-width: 1000px){
  .header{ padding-left: 20px; padding-right: 20px; }

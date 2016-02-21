@@ -112,7 +112,24 @@ remove_action('wp_head', 'adjacent_posts_rel_link');
 
 //     return $filtered_title;
 // }
+// function qtrans_menuitem2( $item ) {
+//     foreach ($item as $key=>$values){
+//     $item[$key]->title = qtrans_useTermLib($values->title);
+// }
+// qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage( $item->title );
+//    return $item;
+// }
+// add_filter('wp_nav_menu_objects',      'qtrans_menuitem2', 0);
+
+// function qtrans_menuitem( $menu_item ) {
+//    $menu_item->title = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage( $menu_item->title );
+//    $menu_item->title = qtrans_useTermLib( $menu_item->title );
+//    return $menu_item;
+// }
+// add_filter('wp_setup_nav_menu_item',      'qtrans_menuitem', 0);
 ?>
+
+
 
 
 

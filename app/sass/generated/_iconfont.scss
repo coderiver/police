@@ -27,6 +27,7 @@ $icon-safari: "\EA0F";
 $icon-search: "\EA10";
 $icon-select: "\EA11";
 $icon-twitter: "\EA12";
+$icon-youtube: "\EA13";
 
 
 %icon {
@@ -77,3 +78,4 @@ $icon-twitter: "\EA12";
 .icon-search:before { content: $icon-search; }
 .icon-select:before { content: $icon-select; }
 .icon-twitter:before { content: $icon-twitter; }
+.icon-youtube:before { content: $icon-youtube; }

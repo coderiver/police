@@ -27,9 +27,16 @@
 
     <div class="header__menu">
       <nav class="main-menu">
+        
         <!-- <a class="main-menu__link <?php if(is_home()) echo 'is-active';?>" href="/">Головна</a> -->
         <a class="main-menu__link <?php if(is_page('news') || is_singular( 'post' )) echo 'is-active';?>" href="/news"><?php echo __('<!--:ru-->Новости<!--:--><!--:ua-->Новини<!--:-->');?></a>
+        
         <a class="main-menu__link <?php if(is_page('highlights') || is_singular( 'highlight' )) echo 'is-active';?>" href="/highlights"><?php echo __('<!--:ru-->Акценты<!--:--><!--:ua-->Акценти<!--:-->');?></a> 
+
+        <a class="main-menu__link <?php if(is_page('projects') || is_singular( 'project' )) echo 'is-active';?>" href="/projects"><?php echo __('<!--:ru-->Полиция и общество<!--:--><!--:ua-->Поліція і громада<!--:-->');?></a>
+
+        <a class="main-menu__link <?php if(is_page('faq') || is_singular( 'faq' )) echo 'is-active';?>" href="/faq"><?php echo __('<!--:ru-->Частые вопросы<!--:--><!--:ua-->Часті питання<!--:-->');?></a>
+
         <a class="main-menu__link <?php if(is_page('contacts')) echo 'is-active';?>" href="/contacts"><?php echo __('<!--:ru-->Контакты<!--:--><!--:ua-->Контакти<!--:-->');?></a>
         <!-- <a class="main-menu__link <?php if(is_page('faq')) echo 'is-active';?>" href="/faq">Часті запитання</a> -->
       </nav>

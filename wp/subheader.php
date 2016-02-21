@@ -1,13 +1,24 @@
-<header class="content-header" style="display: none">
+<header class="content-header">
   <div class="content-header__left">
-    <h3 class="title title_link <?php if(is_page('contacts')) echo 'is-active';?>">
-      <a href="/contacts"><?php echo __('<!--:ru-->Контакты<!--:--><!--:ua-->Контакти<!--:-->');?></a>
-    </h3>
-    <h3 class="title title_link <?php if(is_page('vacancy')) echo 'is-active';?>">
-      <a href="/vacancy"><?php echo __('<!--:ru-->Вакансии<!--:--><!--:ua-->Вакансії<!--:-->');?></a>
-    </h3>
-    <h3 class="title title_link <?php if(is_page('zapit')) echo 'is-active';?>">
-      <a href="/zapit"><?php echo __('<!--:ru-->Запросы<!--:--><!--:ua-->Запити<!--:-->');?></a>
-    </h3>
+    <?php $defaults = array(
+        'theme_location'  => '',
+        'menu'            => '',
+        'container'       => 'false',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => false,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '<h3 class="title title_link">',
+        'after'           => '</h3>',
+        'link_before'     => '',
+        'link_after'      => '',
+    );
+    ?>
+      <?php 
+      // echo strip_tags(wp_nav_menu( $defaults ), '<a><h3>' );
+echo wp_nav_menu( $defaults );
+      ?>
   </div>
 </header>

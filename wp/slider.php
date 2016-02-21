@@ -31,7 +31,7 @@
 				    <p><?php echo $sub; ?></p>
 
 					<?php $link = get_field('link'); if ($link != '') {
-						echo '<a href="'.$link.'" class="link-more">'.__('<!--:ru-->Детальнее<!--:--><!--:ua-->Детальніше<!--:-->').' <i class="icon icon-more"></i></a>';
+						echo '<a href="'.$link.'" class="link-more">'.__('<!--:ru-->Подробнее<!--:--><!--:ua-->Детальніше<!--:-->').' <i class="icon icon-more"></i></a>';
 					} else {?>
 						<span class="hero-slide__link">
 					    <?php echo $gray; ?>

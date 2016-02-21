@@ -273,6 +273,7 @@
   a
     text-decoration: none
     color: $color-lightgrey
+    background: none !important 
   img
     width: 13px
     height: 10px
@@ -298,5 +299,7 @@
   .active
     display: none
   .lang__item,li
+    &:last-child
+      display: none
     // &:not(:first-child)
     //   margin-top: 12px
